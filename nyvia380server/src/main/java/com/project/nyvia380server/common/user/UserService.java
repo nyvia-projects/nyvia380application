@@ -39,16 +39,16 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public Optional<Member> getUser(UUID id) {
-        return userRepository.findById(id); //Optional
+    public Member getUser(UUID id) {
+        return userRepository.findUserOrThrowNotFound(id, userRepository.findAll());
     }
 
     public Member insertUser(Member member) {
         return userRepository.insert(member);
-    }
+    } //FIXME Switch to MetaData
 
     public void deleteUser(UUID id) {
-        userRepository.deleteById(id);
+        userRepository.deleteById(userRepository.findUserOrThrowNotFound(id, userRepository.findAll()).getId());
     }
 
     public void updateUser(Member member) {

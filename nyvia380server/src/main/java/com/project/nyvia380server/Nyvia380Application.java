@@ -17,6 +17,7 @@ import java.net.URISyntaxException;
 @SpringBootApplication
 public class Nyvia380Application extends SpringBootServletInitializer {
 
+
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
         return application.sources(Nyvia380Application.class);

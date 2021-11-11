@@ -1,9 +1,6 @@
 package com.project.nyvia380server.handler;
 
-import com.project.nyvia380server.exception.ExceptionDetails;
-import com.project.nyvia380server.exception.ResourceNotFoundDetails;
-import com.project.nyvia380server.exception.ResourceNotFoundException;
-import com.project.nyvia380server.exception.ValidationExceptionDetails;
+import com.project.nyvia380server.exception.*;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -34,6 +31,21 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 
         );
     }
+    @ExceptionHandler(BadRequestException.class)
+    public ResponseEntity<BadRequestExceptionDetails> handleBadRequestException(BadRequestException exception) {
+        return new ResponseEntity<>(BadRequestExceptionDetails.builder()
+                .timestamp(LocalDateTime.now())
+                .status(HttpStatus.NOT_FOUND.value())
+                .title("Resource Not Found")
+                .detail(exception.getMessage())
+                .developerMessage(exception.getClass()
+                        .getName())
+                .build(), HttpStatus.NOT_FOUND
+
+        );
+    }
+
+
 
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
