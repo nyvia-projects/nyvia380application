@@ -1,31 +1,64 @@
 package com.project.nyvia380server.common.user;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.project.nyvia380server.exception.ResourceNotFoundException;
+import com.project.nyvia380server.util.Utils;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
+@Log4j2
 @Service
+@RequiredArgsConstructor
 public class UserService {
+
+    private final Utils utils;
 
     private final UserRepository userRepository;
 
-    @Autowired
+    public Member findUserOrThrowNotFound(UUID id, List<Member> members) {
+        return members.stream()
+                .filter(member -> member.getId() == id)
+                .findFirst()
+                .orElseThrow(() -> new ResourceNotFoundException("Anime Not Found!"));
+    }
+
+  /*  @Autowired
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
+    }*/
+
+    public String getMessage() {
+        return "Message from RestController";
     }
 
-    public String printUserPageMessage(){
-        return "This is Users/People Page!";
+    public List<Member> getUsers() {
+        return userRepository.findAll();
     }
 
-    public void insertUser(User user) {
-        userRepository.insert(user);
+    public Optional<Member> getUser(UUID id) {
+        return userRepository.findById(id); //Optional
     }
 
-    public void updateUser(User user) {
-        userRepository.save(user);
+    public Member insertUser(Member member) {
+        return userRepository.insert(member);
+    }
+
+    public void deleteUser(UUID id) {
+        userRepository.deleteById(id);
+    }
+
+    public void updateUser(Member member) {
+        userRepository.deleteById(userRepository.findUserOrThrowNotFound(member.getId(), userRepository.findAll())
+                .getId());
+        userRepository.save(member);
+    }
+
+    public Long getUserCount() {
+        return userRepository.count();
     }
 
     /*public String getUsers(){
@@ -33,17 +66,4 @@ public class UserService {
         List<String> userData = usersList.stream().map((User::toString)).collect(Collectors.toList());
         return userData.stream().map(String::valueOf).collect(Collectors.joining("-----"));
     }*/
-
-    public List<User> getUsers() {
-        return userRepository.findAll();
-    }
-
-    public Optional<User> getUser(String id) {
-        return userRepository.findById(id);
-    }
-
-    public String deleteUser(String id) {
-        userRepository.deleteById(id);
-        return String.format("User with #ID: %s was deleted!", id);
-    }
 }

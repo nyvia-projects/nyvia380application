@@ -1,27 +1,40 @@
 package com.project.nyvia380server.common.user;
 
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+public interface User {
 
-@Document(collection = "Users")
-@RequiredArgsConstructor
-@Getter
-public class User {
+    /*TODO
+        Base:
+         LogeIn()
+         LogeOut()
+         ConnectToChatRoom(%id%)
+         DisconnectFromChat(%id%)
+         SendMessage(%message%, %to%)
+       */
 
-    @Id
-    private String userID;
+    /*TODO
+        Moderator:
+         RemoveUserFromChat(%id%)
+         DeleteUserMessage(%id%)
+         SuspendUserFromChats(%uId%)
+         BanUserFromChat(%uId%,%rId%)
+         FreezeUserChatting(%id%,duration)
+       */
 
-    private String userName;
+    /*TODO
+       Admin:
+        AssignModerator(%id%)      : return new Moderator
+        ReassignModerator(%id)
+        DeleteUser(%id%)
+        CreateUser(%user%)        : return new User
 
+       */
+    /*
+       TODO
+        EXTRA:
+         EditMessage(%id%,%uId%)
+         SearchMessage(%rId%,String)
 
-    @JsonCreator
-    public User(@JsonProperty("id") String id, @JsonProperty("name") String name) {
-        this.userID = id;
-        this.userName = name;
-    }
+    */
 
 }

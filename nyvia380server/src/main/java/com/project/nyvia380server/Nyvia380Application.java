@@ -1,5 +1,6 @@
 package com.project.nyvia380server;
 
+import lombok.extern.log4j.Log4j2;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -12,6 +13,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
+@Log4j2
 @SpringBootApplication
 public class Nyvia380Application extends SpringBootServletInitializer {
 
@@ -34,9 +36,9 @@ public class Nyvia380Application extends SpringBootServletInitializer {
 
 
 
-    @EventListener({ApplicationReadyEvent.class})
+  //  @EventListener({ApplicationReadyEvent.class})
     public void applicationReadyEvent() {
-        System.out.println("Server running... launching browser...");
+        log.info("Server running... launching browser...");
         LaunchBrowserTo("http://localhost:8080/");
     }
 
