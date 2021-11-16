@@ -1,0 +1,79 @@
+.Login {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Login .card {
+    border: 1px solid #B48125;
+    border-radius: 10px;
+    background: transparent;
+
+    margin: 20px;
+    padding: 24px 36px 0;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+    width: 520px;
+}
+
+.Login .form-label {
+    float: left;
+}
+
+.Login h2 {
+    font-family: 'Playfair Display', serif;
+    padding: 16px;
+    color: #254832;
+}
+
+.Login .input-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 15px;
+    background-color: #fffdf6;
+
+    box-shadow: none;
+    border-color: #47825b;
+    color: #325D41;
+}
+
+.Login .footer {
+    border-top: 1px solid #254832;
+    padding-top: 10px;
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Login .footer a {
+    color: #47825b;
+}
+
+.Login .login-btn {
+    width: 100px;
+    margin-top: 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+
+    color: #254832;
+    border-color: #8C3F0D;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.Login .login-btn:hover,
+.Login .login-btn:active,
+.Login .login-btn:focus,
+.Login .login-btn:focus:active {
+    background-color: #47825b;
+    color: white;
+    border-color: #47825b;
+}

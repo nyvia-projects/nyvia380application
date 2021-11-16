@@ -1,0 +1,31 @@
+.TextMessage {
+    border-radius: 25px;
+    min-height: 80px;
+    height: 100%;
+    padding: 10px 15px;
+    background-color: #166BFE;
+}
+
+.grid-container {
+    display: grid;
+}
+
+.TextMessage .text {
+    color: whitesmoke;
+}
+
+.grid-container .user-name {
+    font-size: 20px;
+}
+
+.text-message {
+    font-size: 17px;
+    max-width: 75%;
+    text-align: right;
+    justify-self: end;
+}
+
+.TextMessage .text-message-span {
+    text-align: end;
+    word-break: break-all;
+}

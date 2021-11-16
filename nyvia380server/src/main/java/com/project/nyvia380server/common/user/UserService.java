@@ -2,8 +2,12 @@ package com.project.nyvia380server.common.user;
 
 import com.project.nyvia380server.exception.ResourceNotFoundException;
 import com.project.nyvia380server.util.Utils;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,11 +21,13 @@ public class UserService {
 
     private final Utils utils;
 
+    private final ModelMapper modelMapper;
+
     private final UserRepository userRepository;
 
-    public Member findUserOrThrowNotFound(UUID id, List<Member> members) {
+    public Member findUserOrThrowNotFound(String id, List<Member> members) {
         return members.stream()
-                .filter(member -> member.getId() == id)
+                //.filter(member -> member.getId() == id)
                 .findFirst()
                 .orElseThrow(() -> new ResourceNotFoundException("Anime Not Found!"));
     }
@@ -39,20 +45,20 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public Member getUser(UUID id) {
-        return userRepository.findUserOrThrowNotFound(id, userRepository.findAll());
+    public Member getUser(String id) {
+        return userRepository.findUserOrThrowNotFound(id);
     }
 
-    public Member insertUser(Member member) {
-        return userRepository.insert(member);
-    } //FIXME Switch to MetaData
+    public Member insertUser(Member newUser) {
+       return userRepository.insert(newUser);
+    }
 
-    public void deleteUser(UUID id) {
-        userRepository.deleteById(userRepository.findUserOrThrowNotFound(id, userRepository.findAll()).getId());
+    public void deleteUser(String id) {
+        userRepository.deleteById(userRepository.findUserOrThrowNotFound(id).getId());
     }
 
     public void updateUser(Member member) {
-        userRepository.deleteById(userRepository.findUserOrThrowNotFound(member.getId(), userRepository.findAll())
+        userRepository.deleteById(userRepository.findUserOrThrowNotFound(member.getId())
                 .getId());
         userRepository.save(member);
     }
@@ -60,6 +66,7 @@ public class UserService {
     public Long getUserCount() {
         return userRepository.count();
     }
+
 
     /*public String getUsers(){
         List<User> usersList= userRepository.findAll();

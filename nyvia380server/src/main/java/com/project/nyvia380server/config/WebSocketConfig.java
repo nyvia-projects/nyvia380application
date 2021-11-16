@@ -13,6 +13,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     @Override
     public void registerStompEndpoints(final StompEndpointRegistry registry) {
         registry.addEndpoint("/ws-nyvia380chat")
+                .setAllowedOrigins("http://localhost:3000/")
                 .withSockJS();
     }
 

@@ -1,0 +1,30 @@
+
+.ChatMenu .friend {
+    border-radius: 5px;
+    box-shadow: inset;
+    border: solid black;
+    margin: 10px 5px;
+    
+}
+
+.ChatMenu .flex-container {
+    display: flex;
+    flex-direction: row;
+    border: none;
+}
+
+.ChatMenu .friend-image {
+    margin-right: 5px;
+}
+
+.ChatMenu .wrapper {
+    user-select: none;
+}
+
+.ChatMenu .wrapper:hover {
+    cursor: pointer;
+}
+
+.ChatMenu .wrapper:active {
+    transform: translateY(1px);
+}

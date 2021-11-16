@@ -1,0 +1,11 @@
+.ChatTextBox .text-field {
+    border: solid black;
+    border-radius: 30px;
+    z-index: 0;
+}
+
+.ChatTextBox .buttons {
+    border: solid black;
+    height: inherit;
+    background-color: #fff;
+}

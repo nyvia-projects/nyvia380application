@@ -1,0 +1,111 @@
+.Register {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Register .card {
+    border: 1px solid #B48125;
+    border-radius: 10px;
+    background: transparent;
+
+    margin: 20px;
+    padding: 24px 36px 0;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 600px;
+    width: 520px;
+}
+
+.Register .form-label {
+    float: left;
+}
+
+.Register h2 {
+    font-family: 'Playfair Display', serif;
+    padding: 16px;
+    color: #254832;
+}
+
+.Register .input-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 15px;
+
+    background-color: #fffdf6;
+    box-shadow: none;
+    border-color: #47825b;
+    color: #325D41;
+}
+
+.Register .split-input-field {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 20px;
+}
+
+.Register #agreeBox {
+    cursor: pointer;
+    box-shadow: none;
+    border-color: #325D41;
+}
+
+.Register #agreeBox:checked {
+    background-color: #325D41;
+    border-color: #325D41;
+}
+
+.Register .footer {
+    border-top: 1px solid #254832;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Register .footer a {
+    color: #47825b;
+}
+
+.Register .register-btn {
+    width: 100px;
+    margin-top: 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+
+    color: #254832;
+    border-color: #8C3F0D;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+
+.Register .register-btn:hover,
+.Register .register-btn:active,
+.Register .register-btn:focus,
+.Register .register-btn:focus:active {
+    background-color: #47825b;
+    color: white;
+    border-color: #47825b;
+}
+
+.Register .passwordStrength.Weak {
+    color: rgb(123, 0, 0);
+}
+
+.Register .passwordStrength.Medium {
+    color: rgb(177, 130, 9);
+}
+
+.Register .passwordStrength.Strong {
+    color: rgb(10, 116, 10);
+}

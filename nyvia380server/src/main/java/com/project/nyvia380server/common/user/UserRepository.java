@@ -2,22 +2,29 @@ package com.project.nyvia380server.common.user;
 
 import com.project.nyvia380server.exception.ResourceNotFoundException;
 import org.springframework.data.mongodb.repository.MongoRepository;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.UUID;
 
 @Repository
-public interface UserRepository extends MongoRepository<Member, UUID> {
+public interface UserRepository extends MongoRepository<Member, String> {
 
-
-    default Member findUserOrThrowNotFound(UUID id, List<Member> members) {
+    default Member findUserOrThrowNotFound(String id) {
+        List<Member> members = findAll();
         return members.stream()
-                .filter(member -> member.getId() == id)
+                .filter(member -> member.getId()
+                        .equals(id))
                 .findFirst()
                 .orElseThrow(() -> new ResourceNotFoundException("User Not Found!"));
     }
 
-
+    default Member findByAlias(String alias) {
+        List<Member> members = findAll();
+        return members.stream()
+                .filter(member -> member.getAlias()
+                        .equals(alias))
+                .findFirst()
+                .orElseThrow(() -> new ResourceNotFoundException("No User under that Alias!")
+                );
+    }
 }

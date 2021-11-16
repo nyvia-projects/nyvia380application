@@ -1,0 +1,37 @@
+.ChatPage {
+  height: 100%;
+  overflow: hidden;
+}
+
+.content-wrapper {
+    height: 100%;
+
+    display: flex;
+    align-items: stretch;
+}
+
+.ChatPage .right-side {
+    width: 87%;
+    display: grid;
+    grid-template-rows: 80% 20%;
+}
+
+.ChatPage .menu {
+    width: 13%;
+    background: rgba(16, 94, 229, 0.87);
+}
+
+.ChatPage .display {
+    background-color: #98BAF5;
+}
+
+.ChatPage .text-box-area {
+    background-color: #98BAF5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ChatPage .text-box {
+    margin: 0px 50px;
+}

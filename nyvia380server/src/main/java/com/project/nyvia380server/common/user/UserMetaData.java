@@ -3,7 +3,11 @@ package com.project.nyvia380server.common.user;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.project.nyvia380server.common.user.group.Group;
-import lombok.*;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Value;
+import lombok.experimental.SuperBuilder;
 import lombok.extern.jackson.Jacksonized;
 
 import javax.validation.constraints.*;
@@ -15,7 +19,7 @@ import static com.project.nyvia380server.common.user.Privilege.NONE;
 @Value
 @Jacksonized
 @Builder
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@AllArgsConstructor
 public class UserMetaData {
 
     @NotNull @NotBlank @NotEmpty(message = "First name cannot be empty!")
@@ -27,14 +31,13 @@ public class UserMetaData {
     @Max(value = 110, message = "Invalid age!") @Min(value = 16, message = "Must be older than 16!")
     @JsonProperty("age")
     int age;
-    @Builder.Default // clears initialization of annotated field
     @NotNull
     @JsonProperty("privilege")
-    Privilege privilege = NONE;
-    //@NotNull
+    Privilege privilege;
+    @NotNull
     @JsonProperty("alias")
     String alias;
-    @Singular
+    //@Singular
     @JsonProperty("groups")
     Set<Group> groups;
 

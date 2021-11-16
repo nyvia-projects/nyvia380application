@@ -1,14 +1,11 @@
 package com.project.nyvia380server.common.user;
 
 import com.project.nyvia380server.util.Utils;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.modelmapper.ModelMapper;
-import org.modelmapper.config.Configuration;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,20 +27,23 @@ public class UserController {
     private final Utils utils;
 
     private final ModelMapper modelMapper;
-
-    /*@Autowired
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }*/
-
+    
     private UserMetaData convertToDTO(Member member) {
         return modelMapper.map(member, UserMetaData.UserMetaDataBuilder.class)
                 .build();
     }
 
     private Member convertToEntity(UserMetaData dto) {
-        return modelMapper.map(dto, Member.MemberBuilder.class)
-                .build();
+        return modelMapper.map(dto, Member.class);
+    }
+
+    @GetMapping("/toEntity")
+    public Member toEntity(@RequestBody @Valid UserMetaData dto) {
+        return convertToEntity(dto);
+    }
+    @GetMapping("/toDTO")
+    public UserMetaData toEntity(@RequestBody @Valid Member dto) {
+        return convertToDTO(dto);
     }
 
 
@@ -62,22 +62,17 @@ public class UserController {
     }
 
     @GetMapping("/findUser/{id}")
-    public ResponseEntity<UserMetaData> getUser(@PathVariable UUID id) {
+    public ResponseEntity<UserMetaData> getUser(@PathVariable String id) {
         return ResponseEntity.ok(convertToDTO(userService.getUser(id)));
     }
 
     @PutMapping("/insertUser")
-    public ResponseEntity<UserMetaData> insertUser(@Payload @Valid UserMetaData dto) {
-        return ResponseEntity.ok(convertToDTO(userService.insertUser(convertToEntity(dto))));
-    }
-
-    @PutMapping("/insertUser")
-    public ResponseEntity<Member> insertUser(@RequestBody @Valid Member member) {
-        return ResponseEntity.ok(userService.insertUser(member));
+    public UserMetaData insertUser(@RequestBody @Valid UserMetaData dto) {
+        return convertToDTO(userService.insertUser(convertToEntity(dto)));
     }
 
     @DeleteMapping("/deleteUser/{id}")
-    public ResponseEntity<Void> deleteUser(@PathVariable UUID id) {
+    public ResponseEntity<Void> deleteUser(@PathVariable String id) {
         userService.deleteUser(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }

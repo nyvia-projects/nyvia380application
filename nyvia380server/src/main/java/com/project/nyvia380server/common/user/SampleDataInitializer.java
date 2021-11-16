@@ -24,7 +24,7 @@ public class SampleDataInitializer {
     }
 
     Supplier<Member> userSupplier = () -> Member.builder()
-            .id(UUID.randomUUID())
+            //.id(UUID.randomUUID())
             .firstName("Char " + Character.toString((new Random().nextInt(26) + 'A')))
             .lastName("Last " + Character.toString((new Random().nextInt(26) + 'A')))
             .age(16 + new Random().nextInt(22))
