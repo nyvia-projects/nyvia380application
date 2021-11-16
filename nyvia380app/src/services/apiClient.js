@@ -56,7 +56,7 @@ class ApiClient {
 
     async connect(userName, callBack) {
 
-        let socket = new SockJS(this.remoteHostUrl + '/ws-nyvia380chat')
+        let socket = new SockJS(this.remoteHostUrl + '/Nyvia380')
         stompClient = await Stomp.over(socket)
 
         await stompClient.connect({}, async function (frame) {
@@ -82,11 +82,11 @@ class ApiClient {
 
 
     async register(userName) {
-        // return this.request({ endpoint: `/register/${userName}`, method: "GET" })
+        return this.request({ endpoint: `/register/${userName}`, method: "GET" })
     }
     
     async login(userName) {
-        // return this.request({ endpoint: `/login/${userName}`, method: "GET" })
+        return this.request({ endpoint: `/login/${userName}`, method: "GET" })
     }
 
     async signout () {

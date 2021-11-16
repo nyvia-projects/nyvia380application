@@ -36,7 +36,6 @@ function NavBar () {
                             </Nav.Link>
 
                             {
-                                /**TODO change to === */
                                 user === null ?
                                     <>
                                     </>

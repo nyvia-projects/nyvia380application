@@ -1,11 +1,39 @@
-.ChatTextBox .text-field {
-    border: solid black;
-    border-radius: 30px;
+.ChatTextBox #text-field {
+    border-radius: 15px;
+    padding-left: 50px;
     z-index: 0;
 }
 
-.ChatTextBox .buttons {
-    border: solid black;
-    height: inherit;
-    background-color: #fff;
+.ChatTextBox .import-button {
+    height: fit-content;
+    transform: translate(35px, 13px);
+    color: #E3A02B;
+    transition: color 0.1s linear;
+    z-index: 1;
+}
+
+.ChatTextBox .import-button:hover {
+    color: #ced4da;
+}
+
+.ChatTextBox .import-button:active {
+    transform: translate(35px, 14px);
+}
+
+.ChatTextBox .sendArrow {
+    font-size: 30px;
+    color: #E3A02B;
+    transform: translate(-43px, 0px);
+}
+
+.ChatTextBox .sendArrow:hover {
+    color: #ced4da;
+}
+
+.ChatTextBox .sendArrow:active {
+    transform: translate(-43px, 1px);
+}
+
+.ChatTextBox .newsendArrow {
+    height: fit-content;
 }

@@ -1,5 +1,4 @@
 import "./TextMessage.css"
-import profileImage from "../../assets/placeholder-image.png"
 
 
 function TextMessage({message, sender, receiver}) {

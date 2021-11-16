@@ -1,4 +1,5 @@
 import "./ChatTextBox.css"
+import sendArrow from "../../assets/akar-icons_send.png"
 
 import { InputGroup, FormControl, Button, Form} from "react-bootstrap";
 import { useContext, useState } from "react";
@@ -14,8 +15,7 @@ function ChatTextBox({createTextMessage, selectedUser}) {
         setTextMessage(event.target.value)
     }
 
-    const handleOnSubmit = async (event) => {
-        event.preventDefault()
+    const handleOnSubmit = async () => {
 
         if (textMessage === "")
             return;
@@ -29,30 +29,29 @@ function ChatTextBox({createTextMessage, selectedUser}) {
  
     return (
         <div className="ChatTextBox">
-            <Form onSubmit={handleOnSubmit}>
+            <Form>
                 <InputGroup size="lg">
-                    <div className="buttons">
-                        <i className="plus-icon gg-add-r"></i>
-                    </div>
-                    {!selectedUser ?
+
+                    {selectedUser ?
                         <>
+                            <div className="import-button">
+                                <i className="plus-icon gg-add-r"></i>
+                            </div>
                             <FormControl
                                 type="text"
-                                className="text-field"
+                                id="text-field"
                                 placeholder="Message"
                                 onChange={handleOnMessageChange}
                                 value={textMessage}
                             /> 
+                            <div onClick={handleOnSubmit} className="sendArrow" >
+                                <i class="ai-send"></i>
+                            </div>
+                            {/* <Button type="submit">Submit</Button> */}
                         </>
 
                         :
 
-                        <></>
-                    }
-
-                    {selectedUser ?
-                        <Button type="submit">Submit</Button>
-                        :
                         <></>
                     }
                 </InputGroup>
