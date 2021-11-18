@@ -1,28 +1,33 @@
-.TextMessage {
-    border-radius: 25px;
-    min-height: 80px;
-    height: 100%;
-    padding: 10px 15px;
-    background-color: #166BFE;
-}
 
 .grid-container {
     display: grid;
 }
 
 .TextMessage .text {
-    color: whitesmoke;
+    color: black;
 }
 
 .grid-container .user-name {
+    text-align: right;
     font-size: 20px;
+    padding-right: 4px;
+    padding-bottom: 3px;
+}
+
+.TextMessage .text-message {
+    border-radius: 15px;
+    height: 100%;
+    padding: 10px 15px;
+    background-color: #FFFFFF;
+    border: #E3A02B solid 4px;
 }
 
 .text-message {
     font-size: 17px;
-    max-width: 75%;
+    max-width: 95%;
     text-align: right;
     justify-self: end;
+    text-align: left;
 }
 
 .TextMessage .text-message-span {

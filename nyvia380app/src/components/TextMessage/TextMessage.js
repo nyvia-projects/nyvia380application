@@ -6,7 +6,7 @@ function TextMessage({message, sender, receiver}) {
     return (
         <div className="TextMessage">
             <div className="grid-container">
-                <div className="grid-item">
+                <div className="user-name grid-item">
                     <span className="text user-name">{sender}</span>
                 </div>
                 <div className="text text-message grid-item">

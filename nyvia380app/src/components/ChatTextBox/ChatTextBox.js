@@ -15,7 +15,8 @@ function ChatTextBox({createTextMessage, selectedUser}) {
         setTextMessage(event.target.value)
     }
 
-    const handleOnSubmit = async () => {
+    const handleOnSubmit = async (event) => {
+        event.preventDefault()
 
         if (textMessage === "")
             return;
@@ -29,7 +30,7 @@ function ChatTextBox({createTextMessage, selectedUser}) {
  
     return (
         <div className="ChatTextBox">
-            <Form>
+            <Form onSubmit={handleOnSubmit}>
                 <InputGroup size="lg">
 
                     {selectedUser ?
@@ -43,11 +44,11 @@ function ChatTextBox({createTextMessage, selectedUser}) {
                                 placeholder="Message"
                                 onChange={handleOnMessageChange}
                                 value={textMessage}
+                                autoFocus
                             /> 
                             <div onClick={handleOnSubmit} className="sendArrow" >
                                 <i class="ai-send"></i>
                             </div>
-                            {/* <Button type="submit">Submit</Button> */}
                         </>
 
                         :
