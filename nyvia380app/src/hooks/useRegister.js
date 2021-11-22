@@ -1,12 +1,12 @@
 import apiClient from "services/apiClient";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "context/auth";
 import { useAuth } from "./useAuth";
 
 export const useRegister = () => {
   const navigate = useNavigate();
-  const { user, setUser} = useContext(AuthContext);
+  const { setUser} = useContext(AuthContext);
   const { receiveMessage } = useAuth();
   const [passwordStrength, setPasswordStrength] = useState("");
   const [isProcessing, setIsProcessing] = useState();

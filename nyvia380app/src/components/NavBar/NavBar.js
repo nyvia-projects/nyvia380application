@@ -4,12 +4,11 @@ import { useContext } from "react";
 import AuthContext from "context/auth";
 import { Link } from "react-router-dom";
 import { Container, Navbar, Nav } from "react-bootstrap";
-import apiClient from "services/apiClient";
 
 
 function NavBar () {
 
-    const {user, setUser, signout} = useContext(AuthContext)
+    const {user, signout} = useContext(AuthContext)
 
     return (
         <div className="NavBar">

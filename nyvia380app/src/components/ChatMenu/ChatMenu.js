@@ -1,6 +1,6 @@
 import "./ChatMenu.css"
 import apiClient from "services/apiClient";
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useContext } from "react";
 import AuthContext from "context/auth";
 
 
@@ -14,7 +14,7 @@ function ChatMenu ({friendList, setFriendList, selectedUser, setSelectedUser}) {
             setFriendList(res.data)
         }
         
-        fetchFriends()
+        fetchFriends() 
     }, [])
 
     const onFriendClick = (friend) => {
@@ -65,13 +65,11 @@ function ChatMenu ({friendList, setFriendList, selectedUser, setSelectedUser}) {
 
     return (
         <div className="ChatMenu">
-            <div>
-                <div style={{marginBottom: "5px"}}>
-                    Welcome {user}
-                </div>
-                <div className="friend-list">
-                    {loadFriends()}
-                </div>
+            <div style={{marginBottom: "5px"}}>
+                Welcome {user}
+            </div>
+            <div className="friend-list">
+                {loadFriends()}
             </div>
         </div>
     )

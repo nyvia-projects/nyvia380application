@@ -1,7 +1,5 @@
 import "./ChatTextBox.css"
-import sendArrow from "../../assets/akar-icons_send.png"
-
-import { InputGroup, FormControl, Button, Form} from "react-bootstrap";
+import { InputGroup, FormControl, Form} from "react-bootstrap";
 import { useContext, useState } from "react";
 import apiClient from "services/apiClient";
 import AuthContext from "context/auth";

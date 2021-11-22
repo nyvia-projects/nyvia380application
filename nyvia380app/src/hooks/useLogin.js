@@ -6,8 +6,8 @@ import { useAuth } from "./useAuth";
 
 export const useLogin = () => {
   const navigate = useNavigate();
-  const { user, setUser } = useContext(AuthContext);
-  const { receiveMessage, setNewMessage } = useAuth();
+  const { setUser } = useContext(AuthContext);
+  const { receiveMessage } = useAuth();
   const [isProcessing, setIsProcessing] = useState(false);
   const [errors, setErrors] = useState({});
   const [form, setForm] = useState({

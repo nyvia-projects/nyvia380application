@@ -1,28 +1,29 @@
 import "./ChatPage.css"
 
 import { ChatDisplay, ChatMenu, ChatTextBox, TextMessasge } from "components";
-import { useEffect, useState, useContext } from "react";
+import { useState, useContext } from "react";
 import ChatContext from "context/chat";
 
 function ChatPage() {
 
     const { messageList, setMessageList, selectedUser, setSelectedUser } = useContext(ChatContext)
     const [friendList, setFriendList] = useState([])
+    const [isOpen, setIsOpen] = useState(true)
     
-    const [temp, setTemp] = useState([])
+    // const [temp, setTemp] = useState([])
     
-    useEffect(() => {
+    // useEffect(() => {
         
-        const fetchMessages = () => {
+    //     const fetchMessages = () => {
 
-            //Here you would iterate through api 
-            temp.forEach(message => {
-                createTextMessage(message)
-            })
-        }
+    //         //Here you would iterate through api 
+    //         temp.forEach(message => {
+    //             createTextMessage(message)
+    //         })
+    //     }
 
-        fetchMessages()
-    }, [])
+    //     fetchMessages()
+    // }, [])
     
 
     const createTextMessage = (textMessage, receiver, sender) => {
@@ -36,8 +37,13 @@ function ChatPage() {
     return (
         <div className="ChatPage">
             <div className="content-wrapper">
-                <div className="menu left-side flex-item">
-                    <ChatMenu friendList={friendList} setFriendList={setFriendList} selectedUser={selectedUser} setSelectedUser={setSelectedUser} />
+                <div className={`menu left-side flex-item ${isOpen ? "" : "closed"}`}>
+                    <ChatMenu className="chatMenu" friendList={friendList} setFriendList={setFriendList} selectedUser={selectedUser} setSelectedUser={setSelectedUser} />
+                </div>
+                <div className="sidebar-section">
+                    <div className="sidebar-content">
+
+                    </div>
                 </div>
                 <div className="right-side flex-item">
                     <div className="display flex-item">

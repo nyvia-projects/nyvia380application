@@ -20,6 +20,25 @@
     width: 13%;
     max-width: 150px;
     background: rgba(16, 94, 229, 0.87);
+
+    transition: width 0.3s ease-in-out;
+}
+
+.ChatPage .menu.closed {
+    width: 0px;
+}
+
+.ChatPage .sidebar-section {
+    width: 38px;
+    background-color: #98BAF5;
+}
+
+.ChatPage .sidebar-content {
+    height: 100%;
+
+    /* border: solid black; */
+    border-radius: 0px 15px 15px 0px;
+    background-color: rgba(13, 86, 211, 0.55);
 }
 
 .ChatPage .display {
