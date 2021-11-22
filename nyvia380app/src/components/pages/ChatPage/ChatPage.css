@@ -11,13 +11,14 @@
 }
 
 .ChatPage .right-side {
-    width: 87%;
+    width: 100%;
     display: grid;
     grid-template-rows: 80% 20%;
 }
 
 .ChatPage .menu {
     width: 13%;
+    max-width: 150px;
     background: rgba(16, 94, 229, 0.87);
 }
 

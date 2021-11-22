@@ -9,12 +9,7 @@ import apiClient from "services/apiClient";
 
 function NavBar () {
 
-    const {user, setUser} = useContext(AuthContext)
-
-    const signout = () => {
-        setUser(null)
-        apiClient.disconnect()
-    }
+    const {user, setUser, signout} = useContext(AuthContext)
 
     return (
         <div className="NavBar">
