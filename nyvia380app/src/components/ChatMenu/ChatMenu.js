@@ -65,9 +65,9 @@ function ChatMenu ({friendList, setFriendList, selectedUser, setSelectedUser}) {
 
     return (
         <div className="ChatMenu">
-            <div style={{marginBottom: "5px"}}>
+            {/* <div style={{marginBottom: "5px"}}>
                 Welcome {user}
-            </div>
+            </div> */}
             <div className="friend-list">
                 {loadFriends()}
             </div>

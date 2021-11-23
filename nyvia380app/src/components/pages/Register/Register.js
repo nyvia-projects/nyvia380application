@@ -29,6 +29,7 @@ export default function Register() {
               placeholder="Enter a valid username"
               onChange={handleOnTextChange}
               value={form.email}
+              autoFocus
               required
             />
           </FormGroup>

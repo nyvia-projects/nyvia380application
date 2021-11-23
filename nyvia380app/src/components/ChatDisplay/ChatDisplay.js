@@ -16,7 +16,7 @@ function ChatDisplay({messageList, selectedUser}) {
                     return <></>;
 
             return (
-                <div className="message-block" style={message.props.sender === user ? {alignSelf: "end" } : {} }> 
+                <div className="message-block" style={message.props.sender === user ? {alignSelf: "end" } : {alignContent: "start"} }> 
                     <div key={`msg_${index}`}>
                         {message}
                     </div>
@@ -28,7 +28,16 @@ function ChatDisplay({messageList, selectedUser}) {
     return (
         <Container className="ChatDisplay">
             <div className="message-feed">
-                <span>{selectedUser}</span>
+                {selectedUser ? 
+                    <div className="message-header">
+                        <span className="message-reciever">{selectedUser}</span>
+                    </div>
+
+                    : 
+
+                    <>
+                    </>
+                }
                 {renderMessages()}
             </div>
         </Container>

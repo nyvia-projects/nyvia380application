@@ -29,16 +29,33 @@
 }
 
 .ChatPage .sidebar-section {
-    width: 38px;
+    width: 44px;
     background-color: #98BAF5;
 }
 
 .ChatPage .sidebar-content {
     height: 100%;
+    display: grid;
+    justify-items: center;
 
-    /* border: solid black; */
-    border-radius: 0px 15px 15px 0px;
+    border-radius: 0px 0px 0px 0px;
     background-color: rgba(13, 86, 211, 0.55);
+
+    transition: border-radius 0.3s linear;
+}
+
+.ChatPage .sidebar-content.closed {
+    border-radius: 0px 15px 15px 0px;
+}
+
+.ChatPage .sidebar-button {
+    padding-top: 13px;
+
+    transition: transform 0.1s linear;
+}
+
+.ChatPage .sidebar-button:active {
+    transform: scale(1.1);
 }
 
 .ChatPage .display {

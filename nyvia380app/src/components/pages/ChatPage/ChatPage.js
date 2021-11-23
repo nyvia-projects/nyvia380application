@@ -1,4 +1,6 @@
 import "./ChatPage.css"
+import leftChevron from "../../../assets/chevron-left-square.png"
+import rightChevron from "../../../assets/chevron-right-square.png"
 
 import { ChatDisplay, ChatMenu, ChatTextBox, TextMessasge } from "components";
 import { useState, useContext } from "react";
@@ -33,6 +35,10 @@ function ChatPage() {
         setMessageList(messageHistory => [...messageHistory, <TextMessasge message={textMessage} receiver={receiver} sender={sender} />])
     }
 
+    const onArrowClick = () => {
+        setIsOpen(current => !current)
+    }
+
 
     return (
         <div className="ChatPage">
@@ -41,8 +47,14 @@ function ChatPage() {
                     <ChatMenu className="chatMenu" friendList={friendList} setFriendList={setFriendList} selectedUser={selectedUser} setSelectedUser={setSelectedUser} />
                 </div>
                 <div className="sidebar-section">
-                    <div className="sidebar-content">
+                    <div className={`sidebar-content ${isOpen ? "" : "closed"}`}>
+                        {isOpen ?
+                            <img className={`leftChevron sidebar-button`} src={leftChevron} onClick={onArrowClick} alt="left chevron" />
 
+                            :
+
+                            <img className={`rightChevron sidebar-button`} src={rightChevron} onClick={onArrowClick} alt="left chevron" />  
+                        }
                     </div>
                 </div>
                 <div className="right-side flex-item">

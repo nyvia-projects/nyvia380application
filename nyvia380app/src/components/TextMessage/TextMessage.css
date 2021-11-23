@@ -8,18 +8,27 @@
 }
 
 .grid-container .user-name {
-    text-align: right;
+    text-align: left;
     font-size: 20px;
     padding-right: 4px;
     padding-bottom: 3px;
 }
 
+.grid-container .user-name.user {
+    text-align: right;
+}
+
 .TextMessage .text-message {
+    justify-self: left;
     border-radius: 15px;
     height: 100%;
     padding: 10px 15px;
     background-color: #FFFFFF;
     border: #E3A02B solid 4px;
+}
+
+.TextMessage .text-message.user {
+    justify-self: right;
 }
 
 .text-message {
