@@ -1,18 +1,15 @@
 package com.project.nyvia380server.common.user;
 
-import com.project.nyvia380server.exception.ResourceNotFoundException;
+
 import com.project.nyvia380server.util.Utils;
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
 
 @Log4j2
 @Service
@@ -24,13 +21,6 @@ public class UserService {
     private final ModelMapper modelMapper;
 
     private final UserRepository userRepository;
-
-    public Member findUserOrThrowNotFound(String id, List<Member> members) {
-        return members.stream()
-                //.filter(member -> member.getId() == id)
-                .findFirst()
-                .orElseThrow(() -> new ResourceNotFoundException("Anime Not Found!"));
-    }
 
   /*  @Autowired
     public UserService(UserRepository userRepository) {

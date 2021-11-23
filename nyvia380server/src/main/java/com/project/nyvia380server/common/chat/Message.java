@@ -1,52 +1,38 @@
 package com.project.nyvia380server.common.chat;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.PersistenceConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
 import java.util.UUID;
 
-
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+@Document("Messages")
 @Builder
+@Getter
+@AllArgsConstructor
+@RequiredArgsConstructor(onConstructor = @__(@PersistenceConstructor))
 public class Message {
 
     @Id
-    @JsonProperty("id")
     private String id;
+    private final String content;
+    private final String  senderId;
+    private final String  recipientId;
+    private final Date messageTime;
+    private final MessageType messageType; // request type
+    private final MessageStatus messageStatus; // message status
 
-    @JsonProperty("content")
-    private String content;
 
-    @JsonProperty("senderId")
-    private UUID senderId;
-
-    @JsonProperty("recipientId")
-    private UUID recipientId;
-
-    @JsonProperty("timestamp")
-    private Date messageTime;
-
-    @JsonProperty("type")
-    private MessageType messageType;
-
-    @JsonProperty("status")
-    private MessageStatus messageStatus;
-
-    public Message(String htmlEscape) {
-
-    }
-
-    public String getMessage() {
-
-        return "empty message";
-    }
+//    public Message(String htmlEscape) {
+//
+//    }
+//
+//    public String getMessage() {
+//
+//        return "empty message";
+//    }
 
 
     //private String receiver;

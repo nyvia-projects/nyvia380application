@@ -7,7 +7,6 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 
 import java.util.List;
 import java.util.Random;
-import java.util.UUID;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
@@ -18,9 +17,13 @@ import java.util.stream.Stream;
 public class SampleDataInitializer {
 
     @Bean
-    CommandLineRunner commandLineRunner(UserRepository userRepository) {
+    CommandLineRunner commandLineRunner(UserRepository userRepository){
         userRepository.deleteAll();
-        return args -> userRepository.saveAll(supplyUsersForDB.apply(10));
+        return args -> {
+            userRepository.saveAll(supplyUsersForDB.apply(10));
+            userRepository.save(moderatorSupplier.get()); //FIXME this
+            userRepository.save(adminSupplier.get()); //FIXME this
+        };
     }
 
     Supplier<Member> userSupplier = () -> Member.builder()
@@ -30,10 +33,21 @@ public class SampleDataInitializer {
             .age(16 + new Random().nextInt(22))
             .build();
 
-    Function<Integer, List<Member>> supplyUsersForDB = integer ->
-        Stream.generate(() -> userSupplier.get())
-                .limit(integer)
-                .collect(Collectors.toList());
+    Supplier<Moderator> moderatorSupplier = () -> Moderator.builder()
+            .firstName("Moderator 00" + Character.toString((new Random().nextInt(26) + 'A')))
+            .lastName("Last " + Character.toString((new Random().nextInt(26) + 'A')))
+            .age(16 + new Random().nextInt(22))
+            .build();
+
+    Supplier<Moderator> adminSupplier = () -> Admin.builder()
+            .firstName("ADMIN " + Character.toString((new Random().nextInt(26) + 'A')))
+            .lastName("Alfa " + Character.toString((new Random().nextInt(26) + 'A')))
+            .age(16 + new Random().nextInt(22))
+            .build();
+
+    Function<Integer, List<Member>> supplyUsersForDB = integer -> Stream.generate(() -> userSupplier.get())
+            .limit(integer)
+            .collect(Collectors.toList());
 
 
 

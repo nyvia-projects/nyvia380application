@@ -15,8 +15,8 @@
       <list>
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -55,7 +55,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
@@ -187,6 +187,10 @@
       <workItem from="1636683407459" duration="10541000" />
       <workItem from="1637021057322" duration="12911000" />
       <workItem from="1637036766836" duration="10000" />
+      <workItem from="1637037604918" duration="2366000" />
+      <workItem from="1637097480401" duration="6328000" />
+      <workItem from="1637626028867" duration="7982000" />
+      <workItem from="1637634421968" duration="207000" />
     </task>
     <task id="LOCAL-00001" summary="Enabled Custom Rest Exception Handling">
       <created>1636595575168</created>
