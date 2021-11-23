@@ -56,7 +56,7 @@ class ApiClient {
 
     async connect(userName, callBack) {
 
-        let socket = new SockJS(this.remoteHostUrl + '/Nyvia380')
+        let socket = new SockJS(this.remoteHostUrl + '/ws-nyvia380chat')
         stompClient = await Stomp.over(socket)
 
         await stompClient.connect({}, async function (frame) {
@@ -71,7 +71,8 @@ class ApiClient {
         if (stompClient !== null) {
             stompClient.disconnect((frame) => {
                 console.log("DISCONNECTED" + frame)
-g        }
+            })
+        }
     }
 
 
@@ -79,24 +80,13 @@ g        }
         await subscription.unsubscribe()
     }
 
-    // async subscribe () {
-    //     await stompClient.subscribe("/topic/greetings", function (greeting) {
-    //         let data = JSON.parse(greeting.body).content
-    //         console.log("DATA: " + greeting.body)
-    //     });
-
-    //     await stompClient.subscribe("/topic/greetings", function (greeting) {
-    //         let data = JSON.parse(greeting.body).content
-    //         console.log("DATA: " + greeting.body)
-    //     });
-    // }
 
     async register(userName) {
-        return this.request({ endpoint: `/register/${userName}`, method: "GET" })
+        // return this.request({ endpoint: `/register/${userName}`, method: "GET" })
     }
     
     async login(userName) {
-        return this.request({ endpoint: `/login/${userName}`, method: "GET" })
+        // return this.request({ endpoint: `/login/${userName}`, method: "GET" })
     }
 
     async signout () {
@@ -105,10 +95,6 @@ g        }
 
     async fetchAllFriends() {
         return this.request({ endpoint: "/fetchAllUsers", method: "GET" })
-    }
-
-    async sendName(userName) {
-        return this.requestStompClient({ endpoint: "/app/hello", method: "send", data: JSON.stringify({'name': userName}) });
     }
 
     async sendMessageTo(message, receiver, sender) {
