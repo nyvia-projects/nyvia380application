@@ -15,9 +15,17 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
+/**
+ * RestExceptionHandler is our exception handler for our Web Requests to API Layer
+* */
 @ControllerAdvice
 public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 
+    /**
+     * handleResourceNotFoundException handles 404 request
+     * @param exception is a RuntimeException whose details will
+     * */
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<ResourceNotFoundDetails> handleResourceNotFoundException(ResourceNotFoundException exception) {
         return new ResponseEntity<>(ResourceNotFoundDetails.builder()

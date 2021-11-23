@@ -9,11 +9,11 @@ public class ChatMessageService {
 
     private SimpMessagingTemplate simpMessagingTemplate;
 
-    public Message sendMessage (Message message) throws Exception {
-        return new Message(HtmlUtils.htmlEscape(message.getMessage()));
+    public MessageMetaData sendMessage (MessageMetaData message) throws Exception {
+        return MessageMetaData.builder().build();
     }
 
-    public void sendMessageTo (Message message, String userName) throws Exception {
+    public void sendMessageTo (MessageMetaData message, String userName) throws Exception {
 //        if (UserStorage.getInstance().contains(userName))
 //            Thread.sleep(500);
         simpMessagingTemplate.convertAndSend("/topic/chat/" + userName, message);
