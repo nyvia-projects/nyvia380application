@@ -59,8 +59,6 @@ class ApiClient {
         stompClient = await Stomp.over(socket)
 
         await stompClient.connect({}, async function (frame) {
-            console.log("connected to: " + frame)
-
             subscription = await stompClient.subscribe(`/topic/chat/${userName}`, callBack)
         });
 
@@ -68,9 +66,7 @@ class ApiClient {
 
     async disconnect () {
         if (stompClient !== null) {
-            stompClient.disconnect((frame) => {
-                console.log("DISCONNECTED" + frame)
-            })
+            stompClient.disconnect()
         }
     }
 

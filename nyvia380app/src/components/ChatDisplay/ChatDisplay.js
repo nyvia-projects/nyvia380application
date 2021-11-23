@@ -27,17 +27,17 @@ function ChatDisplay({messageList, selectedUser}) {
 
     return (
         <Container className="ChatDisplay">
+            {selectedUser ? 
+                <div className="message-header">
+                    <span className="message-reciever">{selectedUser}</span>
+                </div>
+
+                : 
+
+                <>
+                </>
+            }
             <div className="message-feed">
-                {selectedUser ? 
-                    <div className="message-header">
-                        <span className="message-reciever">{selectedUser}</span>
-                    </div>
-
-                    : 
-
-                    <>
-                    </>
-                }
                 {renderMessages()}
             </div>
         </Container>
