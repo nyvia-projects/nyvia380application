@@ -85,7 +85,11 @@ class ApiClient {
     }
 
     async signout () {
-    
+        return;
+    }
+
+    async fetchAllUsers() {
+        return this.request({ endpoint: "/users/all", method: "GET" })
     }
 
     async fetchAllFriends() {
