@@ -41,8 +41,6 @@
           <element id="library" level="project" name="Maven: org.springframework.hateoas:spring-hateoas:1.2.8" />
           <element id="library" level="project" name="Maven: org.springframework.plugin:spring-plugin-core:2.0.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.atteo:evo-inflector:1.2.2" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.11.4" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.11.4" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.11.4" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-validation:2.4.10" />
           <element id="library" level="project" name="Maven: org.glassfish:jakarta.el:3.0.3" />
@@ -60,7 +58,6 @@
           <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:9.0.52" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.3.9" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.3.9" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.3.9" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot:2.4.10" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.4.10" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.26" />
@@ -103,6 +100,14 @@
           <element id="library" level="project" name="Maven: org.seleniumhq.selenium:selenium-remote-driver:3.141.59" />
           <element id="library" level="project" name="Maven: org.seleniumhq.selenium:selenium-safari-driver:3.141.59" />
           <element id="library" level="project" name="Maven: org.seleniumhq.selenium:selenium-support:3.141.59" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-security:2.4.10" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.3.9" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:5.4.8" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:5.4.8" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:5.4.8" />
+          <element id="library" level="project" name="Maven: io.jsonwebtoken:jjwt:0.9.1" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.11.4" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.11.4" />
         </element>
       </element>
       <element id="directory" name="META-INF">

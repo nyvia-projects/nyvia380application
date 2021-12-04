@@ -4,7 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52cd3a18-2382-4866-b535-0ebc3f2c564b" name="Changes" comment="Added DTO &amp; BadRequest Handler" />
+    <list default="true" id="52cd3a18-2382-4866-b535-0ebc3f2c564b" name="Changes" comment="Added DTO &amp; BadRequest Handler">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_4_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_4_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_4_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_4_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/HelloWorldController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/JwtAuthenticationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/JwtAuthenticationEntryPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/JwtRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/JwtRequestFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/JwtResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/JwtTokenUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/JwtUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/LoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/RegisterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/RegisterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nyvia380app/src/components/ChatMenu/ChatMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/../nyvia380app/src/components/ChatMenu/ChatMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/nyvia380_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/nyvia380_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyvia380.iml" beforeDir="false" afterPath="$PROJECT_DIR$/nyvia380.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/SampleDataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/SampleDataInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/ChatAppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/ChatAppController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/ChatMessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/ChatMessageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/Message$MessageBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/Message$MessageBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/Member.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/SampleDataInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/SampleDataInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/UserMetaData$UserMetaDataBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/UserMetaData$UserMetaDataBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/UserMetaData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/UserMetaData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/handler/RestExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/handler/RestExceptionHandler.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +75,9 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="20fPNNeefP9GHF0X92rU0eKnHy0" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -191,6 +231,9 @@
       <workItem from="1637097480401" duration="6328000" />
       <workItem from="1637626028867" duration="7982000" />
       <workItem from="1637634421968" duration="207000" />
+      <workItem from="1638232975260" duration="498000" />
+      <workItem from="1638406296053" duration="6116000" />
+      <workItem from="1638645533081" duration="939000" />
     </task>
     <task id="LOCAL-00001" summary="Enabled Custom Rest Exception Handling">
       <created>1636595575168</created>

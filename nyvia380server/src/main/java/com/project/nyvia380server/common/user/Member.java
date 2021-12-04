@@ -21,6 +21,7 @@ import static com.project.nyvia380server.common.user.Privilege.NONE;
 @SuperBuilder
 @NoArgsConstructor(force = true)
 @RequiredArgsConstructor(onConstructor = @__(@PersistenceConstructor)) //Sets @ReqArgsCons @PersistCons
+@AllArgsConstructor
 public class Member implements User {
 
     @Id

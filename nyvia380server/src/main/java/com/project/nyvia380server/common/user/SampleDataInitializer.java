@@ -21,8 +21,8 @@ public class SampleDataInitializer {
         userRepository.deleteAll();
         return args -> {
             userRepository.saveAll(supplyUsersForDB.apply(10));
-            userRepository.save(moderatorSupplier.get()); //FIXME this
-            userRepository.save(adminSupplier.get()); //FIXME this
+//            userRepository.save(moderatorSupplier.get()); //FIXME this
+//            userRepository.save(adminSupplier.get()); //FIXME this
         };
     }
 

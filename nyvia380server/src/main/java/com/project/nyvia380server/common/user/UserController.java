@@ -19,6 +19,7 @@ import java.util.stream.Collectors;
 @Validated
 @RestController
 @RequestMapping("/users")
+@CrossOrigin(origins = "http://localhost:3000")
 @RequiredArgsConstructor
 public class UserController {
 
@@ -67,8 +68,8 @@ public class UserController {
     }
 
     @PutMapping("/insertUser")
-    public UserMetaData insertUser(@RequestBody @Valid UserMetaData dto) {
-        return convertToDTO(userService.insertUser(convertToEntity(dto)));
+    public ResponseEntity<UserMetaData> insertUser(@RequestBody @Valid UserMetaData dto) {
+        return ResponseEntity.ok(convertToDTO(userService.insertUser(convertToEntity(dto))));
     }
 
     @DeleteMapping("/deleteUser/{id}")
