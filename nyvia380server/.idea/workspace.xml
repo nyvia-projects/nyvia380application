@@ -4,44 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52cd3a18-2382-4866-b535-0ebc3f2c564b" name="Changes" comment="Added DTO &amp; BadRequest Handler">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_4_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_4_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_4_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_4_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/HelloWorldController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/JwtAuthenticationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/JwtAuthenticationEntryPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/JwtRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/JwtRequestFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/JwtResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/JwtTokenUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/JwtUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/LoginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/RegisterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/RegisterService.java" afterDir="false" />
+    <list default="true" id="52cd3a18-2382-4866-b535-0ebc3f2c564b" name="Changes" comment="creates jwt token files">
       <change beforePath="$PROJECT_DIR$/../nyvia380app/src/components/ChatMenu/ChatMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/../nyvia380app/src/components/ChatMenu/ChatMenu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/nyvia380_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/nyvia380_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nyvia380.iml" beforeDir="false" afterPath="$PROJECT_DIR$/nyvia380.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/SampleDataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/SampleDataInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/JwtTokenUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/RegisterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/ChatAppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/ChatAppController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/ChatMessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/ChatMessageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/Message$MessageBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/Message$MessageBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/Member.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/SampleDataInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/SampleDataInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/UserMetaData$UserMetaDataBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/UserMetaData$UserMetaDataBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/UserMetaData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/UserMetaData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/handler/RestExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/handler/RestExceptionHandler.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,10 +177,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserControllerTest.contextLoads" />
+        <item itemvalue="JUnit.UserControllerTest.index" />
         <item itemvalue="JUnit.UserControllerTest.createTh" />
         <item itemvalue="JUnit.UserControllerTest.contextLoadss" />
-        <item itemvalue="JUnit.UserControllerTest.index" />
+        <item itemvalue="JUnit.UserControllerTest.contextLoads" />
         <item itemvalue="JUnit.Nyvia380ApplicationTests.tst" />
       </list>
     </recent_temporary>
@@ -272,5 +247,16 @@
     <MESSAGE value="Enabled Custom Rest Exception Handling" />
     <MESSAGE value="Added DTO &amp; BadRequest Handler" />
     <option name="LAST_COMMIT_MESSAGE" value="Added DTO &amp; BadRequest Handler" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/WebSecurityConfig.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
