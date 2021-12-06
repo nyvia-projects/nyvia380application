@@ -5,18 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52cd3a18-2382-4866-b535-0ebc3f2c564b" name="Changes" comment="creates jwt token files">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/PersonMetaData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../nyvia380app/src/components/ChatMenu/ChatMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/../nyvia380app/src/components/ChatMenu/ChatMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/nyvia380_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/nyvia380_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nyvia380app/src/services/apiClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/../nyvia380app/src/services/apiClient.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nyvia380.iml" beforeDir="false" afterPath="$PROJECT_DIR$/nyvia380.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/JwtTokenUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/JwtAuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/JwtAuthenticationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/RegisterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/ChatAppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/ChatAppController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/ChatMessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/ChatMessageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/project/nyvia380server/common/user/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/project/nyvia380server/common/user/PersonControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/project/nyvia380server/common/user/UserControllerTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +102,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserControllerTest.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PersonControllerTest.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="nyvia380" />
       <extension name="coverage">
         <pattern>
@@ -113,14 +111,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.project.nyvia380server.common.user" />
-      <option name="MAIN_CLASS_NAME" value="com.project.nyvia380server.common.user.UserControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="com.project.nyvia380server.common.user.PersonControllerTest" />
       <option name="METHOD_NAME" value="contextLoads" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserControllerTest.contextLoadss" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PersonControllerTest.contextLoadss" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="nyvia380" />
       <extension name="coverage">
         <pattern>
@@ -129,14 +127,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.project.nyvia380server.common.user" />
-      <option name="MAIN_CLASS_NAME" value="com.project.nyvia380server.common.user.UserControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="com.project.nyvia380server.common.user.PersonControllerTest" />
       <option name="METHOD_NAME" value="contextLoadss" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserControllerTest.createTh" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PersonControllerTest.createTh" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="nyvia380" />
       <extension name="coverage">
         <pattern>
@@ -145,14 +143,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.project.nyvia380server.common.user" />
-      <option name="MAIN_CLASS_NAME" value="com.project.nyvia380server.common.user.UserControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="com.project.nyvia380server.common.user.PersonControllerTest" />
       <option name="METHOD_NAME" value="createTh" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserControllerTest.index" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PersonControllerTest.index" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="nyvia380" />
       <extension name="coverage">
         <pattern>
@@ -161,7 +159,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.project.nyvia380server.common.user" />
-      <option name="MAIN_CLASS_NAME" value="com.project.nyvia380server.common.user.UserControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="com.project.nyvia380server.common.user.PersonControllerTest" />
       <option name="METHOD_NAME" value="index" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -177,10 +175,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserControllerTest.index" />
-        <item itemvalue="JUnit.UserControllerTest.createTh" />
-        <item itemvalue="JUnit.UserControllerTest.contextLoadss" />
-        <item itemvalue="JUnit.UserControllerTest.contextLoads" />
+        <item itemvalue="JUnit.PersonControllerTest.index" />
+        <item itemvalue="JUnit.PersonControllerTest.createTh" />
+        <item itemvalue="JUnit.PersonControllerTest.contextLoadss" />
+        <item itemvalue="JUnit.PersonControllerTest.contextLoads" />
         <item itemvalue="JUnit.Nyvia380ApplicationTests.tst" />
       </list>
     </recent_temporary>
@@ -247,16 +245,5 @@
     <MESSAGE value="Enabled Custom Rest Exception Handling" />
     <MESSAGE value="Added DTO &amp; BadRequest Handler" />
     <option name="LAST_COMMIT_MESSAGE" value="Added DTO &amp; BadRequest Handler" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/JWT/WebSecurityConfig.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -24,13 +24,10 @@ import com.project.nyvia380server.common.authentication.JWT.JwtResponse;
 @CrossOrigin
 public class JwtAuthenticationController {
 
-    @Autowired
     private AuthenticationManager authenticationManager;
 
-    @Autowired
     private JwtTokenUtil jwtTokenUtil;
 
-    @Autowired
     private JwtUserDetailsService userDetailsService;
 
     @RequestMapping(value = "/authenticate", method = RequestMethod.POST)
