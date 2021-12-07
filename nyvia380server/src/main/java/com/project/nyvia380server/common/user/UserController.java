@@ -17,6 +17,7 @@ import java.util.stream.Collectors;
 
 @Log4j2
 @Validated
+@CrossOrigin
 @RestController
 @RequestMapping("/users")
 @RequiredArgsConstructor
@@ -64,6 +65,11 @@ public class UserController {
     @GetMapping("/findUser/{id}")
     public ResponseEntity<UserMetaData> getUser(@PathVariable String id) {
         return ResponseEntity.ok(convertToDTO(userService.getUser(id)));
+    }
+
+    @GetMapping("/findUserByAlias/{alias}")
+    public ResponseEntity<UserMetaData> findUserByAlias(@PathVariable String alias) {
+        return ResponseEntity.ok(convertToDTO(userService.findUserByAlias(alias)));
     }
 
     @PutMapping("/insertUser")

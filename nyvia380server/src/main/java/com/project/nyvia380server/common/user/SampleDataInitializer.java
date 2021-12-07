@@ -21,8 +21,11 @@ public class SampleDataInitializer {
         userRepository.deleteAll();
         return args -> {
             userRepository.saveAll(supplyUsersForDB.apply(10));
+            /*
             userRepository.save(moderatorSupplier.get()); //FIXME this
             userRepository.save(adminSupplier.get()); //FIXME this
+
+             */
         };
     }
 
@@ -31,8 +34,10 @@ public class SampleDataInitializer {
             .firstName("Char " + Character.toString((new Random().nextInt(26) + 'A')))
             .lastName("Last " + Character.toString((new Random().nextInt(26) + 'A')))
             .age(16 + new Random().nextInt(22))
+            .alias("Mr. " + Character.toString((new Random().nextInt(26) + 'A')))
             .build();
 
+    /*
     Supplier<Moderator> moderatorSupplier = () -> Moderator.builder()
             .firstName("Moderator 00" + Character.toString((new Random().nextInt(26) + 'A')))
             .lastName("Last " + Character.toString((new Random().nextInt(26) + 'A')))
@@ -44,6 +49,7 @@ public class SampleDataInitializer {
             .lastName("Alfa " + Character.toString((new Random().nextInt(26) + 'A')))
             .age(16 + new Random().nextInt(22))
             .build();
+     */
 
     Function<Integer, List<Member>> supplyUsersForDB = integer -> Stream.generate(() -> userSupplier.get())
             .limit(integer)

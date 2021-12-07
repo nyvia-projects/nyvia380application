@@ -7,30 +7,33 @@ import com.project.nyvia380server.common.user.UserMetaData;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
+@CrossOrigin
 @RequiredArgsConstructor
-public class Login {
+public class RegisterController {
+
+    /*
+    @Autowired
+    private final RegisterService registerService;
+     */
 
     @Autowired
     private UserController userController;
 
-    @PostMapping("/login")
-    public ResponseEntity<?> userLogin (@RequestBody UserMetaData member) {
-
-        System.out.println("LOGGIN IN");
-
-        UserMetaData newMember = createUser(member);
-
-        return ResponseEntity.ok((member));
+    @PostMapping("/register")
+    public ResponseEntity<?> userRegister (@RequestBody UserMetaData member) {
+        return ResponseEntity.ok((createUser(member)));
     }
 
-    private UserMetaData createUser (UserMetaData user) {
-        System.out.println(user);
+    public UserMetaData createUser (UserMetaData user) {
+
+        //System.out.println(userController.findUserByAlias(user.getAlias()));
         return userController.insertUser(user);
     }
 }

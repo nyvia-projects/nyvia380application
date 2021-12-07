@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Value;
 import lombok.extern.jackson.Jacksonized;
+import org.hibernate.validator.constraints.UniqueElements;
 
 import javax.validation.constraints.*;
 import java.util.Set;
