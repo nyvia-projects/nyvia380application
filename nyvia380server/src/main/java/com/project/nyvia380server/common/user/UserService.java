@@ -39,6 +39,8 @@ public class UserService {
         return userRepository.findUserOrThrowNotFound(id);
     }
 
+    //public Member createUser(Member member) {  }
+
     public Member insertUser(Member newUser) {
        return userRepository.insert(newUser);
     }
