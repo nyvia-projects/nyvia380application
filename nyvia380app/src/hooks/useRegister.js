@@ -74,7 +74,6 @@ export const useRegister = () => {
     evt.preventDefault();
     setIsProcessing(true);
     setErrors((err) => ({ ...err, form: null }));
-    console.log("REGISTER")
 
     const { data, error } = await apiClient.register({
       firstName: form.firstName,

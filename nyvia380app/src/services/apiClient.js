@@ -77,12 +77,11 @@ class ApiClient {
 
 
     async register(userInfo) {
-        console.log(userInfo)
         return this.request({ endpoint: `/register`, method: "POST", data: userInfo })
     }
     
-    async login(userName) {
-        return this.request({ endpoint: `/login/${userName}`, method: "GET" })
+    async login(userInfo) {
+        return this.request({ endpoint: `/login`, method: "POST", data: userInfo })
     }
 
     async signout () {
@@ -93,11 +92,8 @@ class ApiClient {
         return this.request({ endpoint: "/users/all", method: "GET" })
     }
 
-    async fetchAllFriends() {
-        return this.request({ endpoint: "/fetchAllUsers", method: "GET" })
-    }
-
     async sendMessageTo(message, receiver, sender) {
+        console.log(receiver)
         return this.requestStompClient({ endpoint: `/app/chat/${receiver}`, method: "send", data: JSON.stringify({'message': message, 'sender': sender}) })
     }
 

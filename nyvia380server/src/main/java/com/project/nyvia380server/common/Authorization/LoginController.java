@@ -16,7 +16,7 @@ public class LoginController {
     @Autowired
     private UserController userController;
 
-    @GetMapping("/login")
+    @PostMapping("/login")
     public ResponseEntity<?> userLogin (@RequestBody UserMetaData member) {
         UserMetaData user = validateUser(member);
 

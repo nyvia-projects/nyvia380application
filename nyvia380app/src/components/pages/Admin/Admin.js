@@ -12,8 +12,6 @@ function Admin () {
         const fetch = async () => {
             const data = await apiClient.fetchAllUsers()
             setUserData(data.data)
-
-            console.log(data.data)
         }
 
         fetch()

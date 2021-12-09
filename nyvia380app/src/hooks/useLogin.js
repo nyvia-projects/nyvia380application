@@ -11,8 +11,7 @@ export const useLogin = () => {
   const [isProcessing, setIsProcessing] = useState(false);
   const [errors, setErrors] = useState({});
   const [form, setForm] = useState({
-    email: "",
-    password: "",
+    alias: ""
   });
 
   const handleOnTextChange = (evt) => {
@@ -30,17 +29,22 @@ export const useLogin = () => {
     setIsProcessing(true);
     setErrors((err) => ({ ...err, form: null }));
 
-    /**TEMP LOGIN METHOD */
-    const { data, error } = await apiClient.login(form.email)
+    const { data, error } = await apiClient.login({
+      firstName: "null",
+      lastName: "null",
+      age: "null",
+      privilege: "NONE",
+      alias: form.alias
+    })
 
     if (error) {
       setErrors((err) => ({ ...err, form: error }));
     }
     
-    if (data?.username) {
-      setUser(data.username)
+    if (data?.age !== 0) {
+      setUser(data.alias)
       navigate("/messages");
-      await apiClient.connect(data.username, receiveMessage)
+      await apiClient.connect(data.alias, receiveMessage)
     }
 
     setIsProcessing(false);

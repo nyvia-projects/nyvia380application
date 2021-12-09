@@ -9,7 +9,7 @@ import ChatContext from "context/chat";
 function ChatPage() {
 
     const { messageList, setMessageList, selectedUser, setSelectedUser } = useContext(ChatContext)
-    const [friendList, setFriendList] = useState([])
+    const [friendList, setFriendList] = useState()
     const [isOpen, setIsOpen] = useState(true)
     
     // const [temp, setTemp] = useState([])

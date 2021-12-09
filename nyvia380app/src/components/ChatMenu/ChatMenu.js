@@ -10,7 +10,7 @@ function ChatMenu ({friendList, setFriendList, selectedUser, setSelectedUser}) {
 
     useEffect(() => {
         const fetchFriends = async () => {
-            const res = await apiClient.fetchAllFriends()
+            const res = await apiClient.fetchAllUsers()
             setFriendList(res.data)
         }
         
@@ -23,30 +23,29 @@ function ChatMenu ({friendList, setFriendList, selectedUser, setSelectedUser}) {
     }
 
     const onXClick = (event) => {
-        console.log("HERE")
         setSelectedUser(null)
         event.stopPropagation()
     }
 
 
     const loadFriends = () => {
-        return friendList?.map((friendName, index) => {
-            if (friendName === user) 
+        return friendList?.map((friend, index) => {
+            if (friend.alias === user) 
                 return (<></>);
 
             return (
-                <div onClick={() => onFriendClick(friendName)} className="wrapper">
-                    <div id={"friend" + index} className="friend" style={selectedUser === friendName ? {backgroundColor: "#0C47AC"} : {}}>
+                <div onClick={() => onFriendClick(friend.alias)} className="wrapper">
+                    <div id={"friend" + index} className="friend" style={selectedUser === friend.alias ? {backgroundColor: "#0C47AC"} : {}}>
                         <div className="flex-container">
                             <div className="friend-header">
                                 <div className="friend-image">
                                     
                                 </div>
                                 <div className="friend-name">
-                                    {friendName}
+                                    {friend.firstName}
                                 </div>
                             </div>
-                            {selectedUser === friendName ?
+                            {selectedUser === friend.alias ?
                                 <div onClick={onXClick} className="x-button">
                                     x
                                 </div>
