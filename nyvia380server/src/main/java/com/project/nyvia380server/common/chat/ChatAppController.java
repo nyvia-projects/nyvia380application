@@ -1,5 +1,6 @@
 package com.project.nyvia380server.common.chat;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
@@ -17,6 +18,11 @@ public class ChatAppController {
         this.chatMessageService = chatMessageService;
     }
 
+    private ModelMapper modelMapper;
+
+    private Message convertToEntity(MessageMetaData dto) { return modelMapper.map(dto, Message.class); }
+
+
     @MessageMapping("/chat")
     @SendTo("/topic/chat")
     public MessageMetaData sendMessage (MessageMetaData message) throws Exception {
@@ -26,8 +32,6 @@ public class ChatAppController {
 
     @MessageMapping("/chat/{userName}")
     public void sendMessageTo (MessageMetaData message, @DestinationVariable String userName) throws Exception {
-        System.out.println(userName);
-        System.out.println(message);
         chatMessageService.sendMessageTo(message, userName);
     }
 
