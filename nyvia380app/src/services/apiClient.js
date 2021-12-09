@@ -76,8 +76,9 @@ class ApiClient {
     }
 
 
-    async register(userName) {
-        return this.request({ endpoint: `/register/${userName}`, method: "GET" })
+    async register(userInfo) {
+        console.log(userInfo)
+        return this.request({ endpoint: `/register`, method: "POST", data: userInfo })
     }
     
     async login(userName) {

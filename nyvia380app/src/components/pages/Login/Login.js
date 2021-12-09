@@ -20,15 +20,12 @@ export default function Login() {
         <Form onSubmit={handleOnClickSubmit}>
           <FormGroup>
             <FormLabel className="form-label">Username</FormLabel>
-            {/* <FormLabel className="form-label">Email</FormLabel> */}
             <Form.Control
-              // type="email"
-              name="email"
+              name="alias"
               className="input-field"
               placeholder="Username"
-              // placeholder="user@email.com"
               onChange={handleOnTextChange}
-              value={form.email}
+              value={form.alias}
               autoFocus
               required
             />

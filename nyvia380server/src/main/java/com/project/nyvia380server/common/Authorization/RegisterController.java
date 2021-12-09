@@ -14,14 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:3000")
 @RequiredArgsConstructor
 public class RegisterController {
-
-    /*
-    @Autowired
-    private final RegisterService registerService;
-     */
 
     @Autowired
     private UserController userController;

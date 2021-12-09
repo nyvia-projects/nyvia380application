@@ -24,11 +24,11 @@ export default function Register() {
           <FormGroup>
             <FormLabel className="form-label">Username</FormLabel>
             <Form.Control
-              name="email"
+              name="alias"
               className="input-field"
               placeholder="Enter a valid username"
               onChange={handleOnTextChange}
-              value={form.email}
+              value={form.alias}
               autoFocus
               required
             />
@@ -52,7 +52,7 @@ export default function Register() {
           </FormGroup>
           <FormControl.Feedback type="isInvalid" style={{ color: "red" }}>
             {errors.email}
-          </FormControl.Feedback>
+          </FormControl.Feedback> */}
 
           <div className="split-input-field">
             <FormGroup>
@@ -84,9 +84,22 @@ export default function Register() {
                 required
               />
             </FormGroup>
+
+            <FormGroup>
+              <FormLabel className="form-label">Age</FormLabel>
+              <Form.Control
+                type="number"
+                name="age"
+                className="input-field"
+                onChange={handleOnTextChange}
+                value={form.age}
+                required
+              />
+            </FormGroup>
+            
           </div>
 
-          <FormGroup>
+          {/* <FormGroup>
             <FormLabel className="form-label">Password</FormLabel>
             <Form.Control
               type="password"
@@ -104,9 +117,9 @@ export default function Register() {
                 {passwordStrength}
               </span>
             )}
-          </div>
+          </div> */}
 
-          <FormGroup>
+          {/* <FormGroup>
             <FormLabel className="form-label">Confirm Password</FormLabel>
             <Form.Control
               type="password"

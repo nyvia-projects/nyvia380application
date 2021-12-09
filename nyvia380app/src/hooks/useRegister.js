@@ -14,9 +14,9 @@ export const useRegister = () => {
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
+    age: "",
+    privilege: "NONE",
+    alias: "",
   });
 
 
@@ -76,21 +76,20 @@ export const useRegister = () => {
     setErrors((err) => ({ ...err, form: null }));
     console.log("REGISTER")
 
-    /**TEMP REGISTER METHOD */
-    const { data, error } = await apiClient.register(form.email)
-    // const { data, error } = await apiClient.register({
-    //   firstName: form.firstName,
-    //   lastName: form.lastName,
-    //   email: form.email,
-    //   password: form.password,
-    // });
+    const { data, error } = await apiClient.register({
+      firstName: form.firstName,
+      lastName: form.lastName,
+      age: form.age,
+      privilege: form.privilege,
+      alias: form.alias
+    });
 
     if (error) setErrors((err) => ({ ...err, form: error }));
 
-    if (data?.username) {
-      setUser(data.username)
+    if (data) {
+      setUser(data.alias)
       navigate("/messages");
-      await apiClient.connect(data.username, receiveMessage)
+      await apiClient.connect(data.alias, receiveMessage)
     }
 
     setIsProcessing(false);
