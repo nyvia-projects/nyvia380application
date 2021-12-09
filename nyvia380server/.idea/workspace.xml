@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52cd3a18-2382-4866-b535-0ebc3f2c564b" name="Changes" comment="got userController working in login class">
-      <change beforePath="$PROJECT_DIR$/../nyvia380app/src/hooks/useLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/../nyvia380app/src/hooks/useLogin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nyvia380app/src/hooks/useRegister.js" beforeDir="false" afterPath="$PROJECT_DIR$/../nyvia380app/src/hooks/useRegister.js" afterDir="false" />
+    <list default="true" id="52cd3a18-2382-4866-b535-0ebc3f2c564b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/Nyvia380Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/Nyvia380Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/chat/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/chat/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/MessageMetaData$MessageMetaDataBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/MessageMetaData$MessageMetaDataBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/MessageMetaData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/MessageMetaData.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
