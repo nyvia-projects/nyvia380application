@@ -85,7 +85,7 @@ export const useRegister = () => {
 
     if (error) setErrors((err) => ({ ...err, form: error }));
 
-    if (data?.age) {
+    if (data?.age !== 0) {
       setUser(data?.alias)
       navigate("/messages");
       await apiClient.connect(data.alias, receiveMessage)

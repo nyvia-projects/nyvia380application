@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52cd3a18-2382-4866-b535-0ebc3f2c564b" name="Changes" comment="got userController working in login class">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/Authorization/RegisterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nyvia380app/src/hooks/useLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/../nyvia380app/src/hooks/useLogin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nyvia380app/src/hooks/useRegister.js" beforeDir="false" afterPath="$PROJECT_DIR$/../nyvia380app/src/hooks/useRegister.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/Authorization/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/Authorization/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/SampleDataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/SampleDataInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/UserMetaData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/UserMetaData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/SampleDataInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/SampleDataInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/UserMetaData$UserMetaDataBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/UserMetaData$UserMetaDataBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/UserMetaData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/UserMetaData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/Nyvia380Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/Nyvia380Application.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +41,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="20fPNNeefP9GHF0X92rU0eKnHy0" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -69,7 +64,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
@@ -208,6 +203,7 @@
       <workItem from="1637634421968" duration="207000" />
       <workItem from="1638900772956" duration="523000" />
       <workItem from="1638909214428" duration="3809000" />
+      <workItem from="1639087179454" duration="760000" />
     </task>
     <task id="LOCAL-00001" summary="Enabled Custom Rest Exception Handling">
       <created>1636595575168</created>
@@ -239,7 +235,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="WebSocketConfig &amp; Message" />

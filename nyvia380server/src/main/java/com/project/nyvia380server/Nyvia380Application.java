@@ -28,7 +28,6 @@ public class Nyvia380Application extends SpringBootServletInitializer {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("http://localhost:8080/");*/
-
 //        LaunchBrowserTo("http://localhost:8080/");
 
     }
