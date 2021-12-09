@@ -17,7 +17,6 @@ class ApiClient {
     // utility method...
     async request({endpoint, method = `GET`, data = {}}) {
         const url = `${this.remoteHostUrl}${endpoint}`;
-        console.log(url)
         const headers = {
             "Content-Type": "application/json"
         }
@@ -93,7 +92,6 @@ class ApiClient {
     }
 
     async sendMessageTo(message, receiver, sender) {
-        console.log(message)
         return this.requestStompClient({ endpoint: `/app/chat/${receiver}`, method: "send", data: JSON.stringify({'sender': sender, 'receiver': receiver, 'message': message}) })
     }
 

@@ -16,7 +16,7 @@ import java.util.Map;
 @Value
 @Jacksonized
 @Builder
-@AllArgsConstructor
+//@AllArgsConstructor
 public class MessageMetaData {
 
     /*
