@@ -1,5 +1,6 @@
 package com.project.nyvia380server.common.chat;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.HtmlUtils;
@@ -7,6 +8,7 @@ import org.springframework.web.util.HtmlUtils;
 @Service
 public class ChatMessageService {
 
+    @Autowired
     private SimpMessagingTemplate simpMessagingTemplate;
 
     public MessageMetaData sendMessage (MessageMetaData message) throws Exception {

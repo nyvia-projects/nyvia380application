@@ -20,11 +20,14 @@ public class ChatAppController {
     @MessageMapping("/chat")
     @SendTo("/topic/chat")
     public MessageMetaData sendMessage (MessageMetaData message) throws Exception {
+        System.out.println(message);
         return chatMessageService.sendMessage(message);
     }
 
     @MessageMapping("/chat/{userName}")
     public void sendMessageTo (MessageMetaData message, @DestinationVariable String userName) throws Exception {
+        System.out.println(userName);
+        System.out.println(message);
         chatMessageService.sendMessageTo(message, userName);
     }
 

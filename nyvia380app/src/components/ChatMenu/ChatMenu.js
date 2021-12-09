@@ -42,7 +42,7 @@ function ChatMenu ({friendList, setFriendList, selectedUser, setSelectedUser}) {
                                     
                                 </div>
                                 <div className="friend-name">
-                                    {friend.firstName}
+                                    {friend.alias}
                                 </div>
                             </div>
                             {selectedUser === friend.alias ?

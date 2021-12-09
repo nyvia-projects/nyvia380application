@@ -93,8 +93,8 @@ class ApiClient {
     }
 
     async sendMessageTo(message, receiver, sender) {
-        console.log(receiver)
-        return this.requestStompClient({ endpoint: `/app/chat/${receiver}`, method: "send", data: JSON.stringify({'message': message, 'sender': sender}) })
+        console.log(message)
+        return this.requestStompClient({ endpoint: `/app/chat/${receiver}`, method: "send", data: JSON.stringify({'sender': sender, 'receiver': receiver, 'message': message}) })
     }
 
 }

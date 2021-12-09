@@ -42,7 +42,7 @@ export const useLogin = () => {
     }
     
     if (data?.age !== 0) {
-      setUser(data.alias)
+      setUser(data?.alias)
       navigate("/messages");
       await apiClient.connect(data.alias, receiveMessage)
     }

@@ -19,6 +19,7 @@ import java.util.Map;
 @AllArgsConstructor
 public class MessageMetaData {
 
+    /*
     @NotNull @NotEmpty
     @JsonProperty("id")
     Map<String, String> id;
@@ -35,6 +36,7 @@ public class MessageMetaData {
     @JsonProperty("recipientId")
     String recipientId;
 
+
     @NotNull @NotBlank @NotEmpty
     @JsonProperty("timestamp")
     Date messageTime;
@@ -43,7 +45,23 @@ public class MessageMetaData {
     @JsonProperty("type")
     MessageType messageType;
 
+
     @NotNull
     @JsonProperty("status")
     MessageStatus messageStatus;
+
+     */
+
+    @NotNull
+    @JsonProperty("sender")
+    String sender;
+
+    @NotNull
+    @JsonProperty("receiver")
+    String receiver;
+
+    @NotNull
+    @JsonProperty("message")
+    String message;
+
 }
