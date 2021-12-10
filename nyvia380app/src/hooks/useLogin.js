@@ -3,10 +3,13 @@ import { useNavigate } from "react-router";
 import apiClient from "services/apiClient";
 import AuthContext from "context/auth";
 import { useAuth } from "./useAuth";
+import ChatContext from "context/chat";
+import TextMessage from "components/TextMessage/TextMessage";
 
 export const useLogin = () => {
   const navigate = useNavigate();
   const { setUser } = useContext(AuthContext);
+  const { setMessageList } = useContext(ChatContext)
   const { receiveMessage } = useAuth();
   const [isProcessing, setIsProcessing] = useState(false);
   const [errors, setErrors] = useState({});
@@ -44,6 +47,11 @@ export const useLogin = () => {
     if (data?.age !== 0) {
       setUser(data?.alias)
       navigate("/messages");
+
+      setMessageList((await apiClient.fetchAllMessages(data?.alias)).data?.map(element => {
+        return <TextMessage message={element.message} sender={element.sender} receiver={element.receiver} />
+      }))
+
       await apiClient.connect(data?.alias, receiveMessage)
     }
 

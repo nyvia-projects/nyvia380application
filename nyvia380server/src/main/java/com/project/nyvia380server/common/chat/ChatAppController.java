@@ -6,9 +6,17 @@ import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
 
 
 @Controller
+@RestController
+@CrossOrigin(origins = "http://localhost:3000")
 public class ChatAppController {
 
     private final ChatMessageService chatMessageService;
@@ -35,8 +43,8 @@ public class ChatAppController {
         chatMessageService.sendMessageTo(message, userName);
     }
 
-    @MessageMapping("/chat/{userName}/fetchAllMessages")
-    public void fetchAllMessages (@DestinationVariable String userName) {
-        chatMessageService.fetchAllMessages(userName);
+    @GetMapping("/chat/{userName}/fetchAllMessages")
+    public ArrayList<MessageMetaData> fetchAllMessages (@PathVariable String userName) {
+        return chatMessageService.fetchAllMessages(userName);
     }
 }

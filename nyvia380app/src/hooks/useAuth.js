@@ -8,7 +8,7 @@ export const useAuth = () => {
 
     function receiveMessage (message) {
         let data = JSON.parse(message.body)
-        setMessageList(messageHistory => [...messageHistory, <TextMessage message={data.message} sender={data.sender} />])
+        setMessageList(messageHistory => [...messageHistory, <TextMessage message={data.message} sender={data.sender} receiver={data.receiver} />])
     }
 
     return {
