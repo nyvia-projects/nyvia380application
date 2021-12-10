@@ -72,7 +72,7 @@ function ChatMenu ({friendList, setFriendList, selectedUser, setSelectedUser}) {
                 Welcome {user}
             </div> */}
             <div className="reload-btn" onClick={reloadFriends}>
-                <div>RELOAD</div><i className="gg-undo"></i>
+            <i className="gg-redo"></i><div>RELOAD</div>
             </div>
             <div className="friend-list">
                 {loadFriends()}

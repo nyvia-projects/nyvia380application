@@ -23,11 +23,11 @@ function NavBar () {
 
                     <Navbar.Collapse>
                         <Nav className="links" navbarScroll>
-                            <Nav.Link as={Link} to="/home" className="link">
+                            {/* <Nav.Link as={Link} to="/home" className="link">
                                 <h6>
                                     Home
                                 </h6>
-                            </Nav.Link>
+                            </Nav.Link> */}
 
                             {
                                 user === null ?
@@ -43,11 +43,11 @@ function NavBar () {
                                     </Nav.Link>
                             }
 
-                            <Nav.Link className="link">
+                            {/* <Nav.Link className="link">
                                 <h6>
                                     About
                                 </h6>
-                            </Nav.Link>
+                            </Nav.Link> */}
 
                             {
                                 user === null ?

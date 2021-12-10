@@ -29,8 +29,8 @@
   background-color: #5d8bd9;
 }
 
-.ChatMenu .gg-undo {
-  transform: translate(6px, 5px);
+.ChatMenu .gg-redo {
+  transform: translate(-6px, 5px);
 }
 
 .ChatMenu .friend {
