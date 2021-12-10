@@ -52,9 +52,13 @@ export const useLogin = () => {
         setUser(data?.alias)
         navigate("/messages");
 
-        setMessageList((await apiClient.fetchAllMessages(data?.alias)).data?.map(element => {
-          return <TextMessage message={element.message} sender={element.sender} receiver={element.receiver} />
-        }))
+        const messages = (await apiClient.fetchAllMessages(data?.alias)).data
+
+        if (messages !== undefined && messages !== null) {
+          setMessageList(messages.map(element => {
+            return <TextMessage message={element.message} sender={element.sender} receiver={element.receiver} />
+          }))
+        }
 
         await apiClient.connect(data?.alias, receiveMessage)
       }

@@ -27,6 +27,10 @@ function ChatMenu ({friendList, setFriendList, selectedUser, setSelectedUser}) {
         event.stopPropagation()
     }
 
+    const reloadFriends = async () => {
+        const res = await apiClient.fetchAllUsers()
+        setFriendList(res.data)
+    }
 
     const loadFriends = () => {
         return friendList?.map((friend, index) => {
@@ -67,6 +71,9 @@ function ChatMenu ({friendList, setFriendList, selectedUser, setSelectedUser}) {
             {/* <div style={{marginBottom: "5px"}}>
                 Welcome {user}
             </div> */}
+            <div className="reload-btn" onClick={reloadFriends}>
+                <div>RELOAD</div><i className="gg-undo"></i>
+            </div>
             <div className="friend-list">
                 {loadFriends()}
             </div>

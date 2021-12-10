@@ -10,6 +10,29 @@
   transform: translateY(1px);
 }
 
+.ChatMenu .reload-btn {
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  padding: 5px 0px;
+}
+
+.ChatMenu .reload-btn:hover {
+  cursor: pointer;
+  user-select: none;
+}
+
+.ChatMenu .reload-btn:active {
+  background-color: #5d8bd9;
+}
+
+.ChatMenu .gg-undo {
+  transform: translate(6px, 5px);
+}
+
 .ChatMenu .friend {
   display: flex;
   flex-direction: column;

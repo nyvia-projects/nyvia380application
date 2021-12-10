@@ -11,7 +11,7 @@ function ChatDisplay({messageList, selectedUser}) {
     const renderMessages = () => {
         
         
-        return messageList.filter(message => ( ((message.props?.sender === selectedUser) || (message.props?.sender === user))  && !(message.props.sender === user && message.props?.receiver !== selectedUser) ) ).map((message, index) => {
+        return messageList?.filter(message => ( ((message.props?.sender === selectedUser) || (message.props?.sender === user))  && !(message.props.sender === user && message.props?.receiver !== selectedUser) ) ).map((message, index) => {
             return (
                 <div className="message-block" style={message.props.sender === user ? {alignSelf: "end" } : {alignContent: "start"} }> 
                     <div key={`msg_${index}`}>
