@@ -15,7 +15,7 @@ function NavBar () {
             <Navbar expand="lg">
                 <Container>
                     <Navbar.Brand className="logo">
-                        <img className="logo-image" src={logo} alt="Nvyia logo" />
+                        {/* <img className="logo-image" src={logo} alt="Nvyia logo" /> */}
                         <span className="logo-title">Nyvia380</span>
                     </Navbar.Brand>
 

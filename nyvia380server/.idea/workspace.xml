@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52cd3a18-2382-4866-b535-0ebc3f2c564b" name="Changes" comment="convert message to messagemetadata in controller">
-      <change beforePath="$PROJECT_DIR$/../nyvia380app/src/services/apiClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/../nyvia380app/src/services/apiClient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/SampleDataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/SampleDataInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/UserMetaData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/UserMetaData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/SampleDataInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/SampleDataInitializer.class" afterDir="false" />
-    </list>
+    <list default="true" id="52cd3a18-2382-4866-b535-0ebc3f2c564b" name="Changes" comment="convert message to messagemetadata in controller" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -206,7 +199,7 @@
       <workItem from="1638900772956" duration="523000" />
       <workItem from="1638909214428" duration="3809000" />
       <workItem from="1639087179454" duration="760000" />
-      <workItem from="1639161036267" duration="1837000" />
+      <workItem from="1639161036267" duration="2281000" />
     </task>
     <task id="LOCAL-00001" summary="Enabled Custom Rest Exception Handling">
       <created>1636595575168</created>
