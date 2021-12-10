@@ -28,6 +28,7 @@ public class Member implements User {
     protected String firstName;
     protected String lastName;
     protected int age;
+    protected String password;
 
     @Builder.Default // clears initialization of annotated field
     protected Privilege privilege = NONE;

@@ -31,7 +31,7 @@ export default function Login() {
             />
           </FormGroup>
 
-          {/* <FormGroup>
+          <FormGroup>
             <FormLabel className="form-label">Password</FormLabel>
             <Form.Control
               type="password"
@@ -42,7 +42,7 @@ export default function Login() {
               value={form.password}
               required
             />
-          </FormGroup> */}
+          </FormGroup>
 
           <Button type="submit" className="login-btn">
             login

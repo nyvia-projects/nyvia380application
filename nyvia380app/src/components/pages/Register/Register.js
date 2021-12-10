@@ -99,7 +99,7 @@ export default function Register() {
             
           </div>
 
-          {/* <FormGroup>
+          <FormGroup>
             <FormLabel className="form-label">Password</FormLabel>
             <Form.Control
               type="password"
@@ -117,9 +117,9 @@ export default function Register() {
                 {passwordStrength}
               </span>
             )}
-          </div> */}
+          </div>
 
-          {/* <FormGroup>
+          <FormGroup>
             <FormLabel className="form-label">Confirm Password</FormLabel>
             <Form.Control
               type="password"
@@ -141,7 +141,7 @@ export default function Register() {
           >
             {errors.confirmPassword}
           </FormControl.Feedback>
-
+{/* 
           <FormGroup>
             <Form.Check
               id="agreeBox"

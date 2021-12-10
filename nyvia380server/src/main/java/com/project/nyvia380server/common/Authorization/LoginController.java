@@ -2,6 +2,7 @@ package com.project.nyvia380server.common.Authorization;
 
 import com.project.nyvia380server.common.user.UserController;
 import com.project.nyvia380server.common.user.UserMetaData;
+import com.project.nyvia380server.exception.BadRequestException;
 import com.project.nyvia380server.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +31,12 @@ public class LoginController {
     public UserMetaData validateUser (UserMetaData user) {
 
         try {
-            return userController.findUserByAlias(user.getAlias());
+            UserMetaData res = userController.findUserByAlias(user.getAlias());
+            if (res.getPassword().equals(user.getPassword()))
+                return res;
+            else
+                return user;
+
         } catch (ResourceNotFoundException e) {
             return user;
         }

@@ -17,6 +17,7 @@ export const useRegister = () => {
     age: "",
     privilege: "NONE",
     alias: "",
+    password: ""
   });
 
 
@@ -80,15 +81,19 @@ export const useRegister = () => {
       lastName: form.lastName,
       age: form.age,
       privilege: form.privilege,
-      alias: form.alias
+      alias: form.alias,
+      password: form.password
     });
 
     if (error) setErrors((err) => ({ ...err, form: error }));
+    console.log(error)
 
-    if (data?.age !== 0) {
-      setUser(data?.alias)
-      navigate("/messages");
-      await apiClient.connect(data.alias, receiveMessage)
+    if (error === null) {
+      if (data?.age !== 0) {
+        setUser(data?.alias)
+        navigate("/messages");
+        await apiClient.connect(data?.alias, receiveMessage)
+      }
     }
 
     setIsProcessing(false);
