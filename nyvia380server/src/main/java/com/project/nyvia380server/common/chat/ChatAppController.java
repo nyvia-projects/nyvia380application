@@ -34,7 +34,6 @@ public class ChatAppController {
     @MessageMapping("/chat")
     @SendTo("/topic/chat")
     public MessageMetaData sendMessage (MessageMetaData message) throws Exception {
-        System.out.println(message);
         return chatMessageService.sendMessage(message);
     }
 
