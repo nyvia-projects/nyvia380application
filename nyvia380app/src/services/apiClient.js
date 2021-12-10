@@ -28,6 +28,8 @@ class ApiClient {
             const errorResponse = error?.response?.data?.error?.message;
             return {data: null, error: errorResponse || String(error)};
         }
+
+        console.log(url)
     }
 
     async requestStompClient({endpoint, method, header = {}, data = {}}) {
@@ -93,6 +95,10 @@ class ApiClient {
 
     async sendMessageTo(message, receiver, sender) {
         return this.requestStompClient({ endpoint: `/app/chat/${receiver}`, method: "send", data: JSON.stringify({'sender': sender, 'receiver': receiver, 'message': message}) })
+    }
+
+    async fetchAllMessages(alias) {
+        return this.request({ endpoint: `/chat/${alias}/fetchAllMessages`, method: "GET" })
     }
 
 }

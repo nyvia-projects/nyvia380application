@@ -9,6 +9,7 @@ import org.modelmapper.ModelMapper;
 
 import org.springframework.stereotype.Service;
 
+
 import java.util.List;
 
 @Log4j2
@@ -27,6 +28,8 @@ public class UserService {
         this.userRepository = userRepository;
     }*/
 
+
+
     public String getMessage() {
         return "Message from RestController";
     }
@@ -44,8 +47,9 @@ public class UserService {
     }
 
     public Member insertUser(Member newUser) {
-       return userRepository.insert(newUser);
+         return userRepository.insert(newUser);
     }
+
 
     public void deleteUser(String id) {
         userRepository.deleteById(userRepository.findUserOrThrowNotFound(id).getId());

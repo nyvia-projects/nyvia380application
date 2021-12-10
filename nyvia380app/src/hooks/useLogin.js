@@ -3,15 +3,19 @@ import { useNavigate } from "react-router";
 import apiClient from "services/apiClient";
 import AuthContext from "context/auth";
 import { useAuth } from "./useAuth";
+import ChatContext from "context/chat";
+import TextMessage from "components/TextMessage/TextMessage";
 
 export const useLogin = () => {
   const navigate = useNavigate();
   const { setUser } = useContext(AuthContext);
+  const { setMessageList } = useContext(ChatContext)
   const { receiveMessage } = useAuth();
   const [isProcessing, setIsProcessing] = useState(false);
   const [errors, setErrors] = useState({});
   const [form, setForm] = useState({
-    alias: ""
+    alias: "",
+    password: ""
   });
 
   const handleOnTextChange = (evt) => {
@@ -34,19 +38,29 @@ export const useLogin = () => {
       lastName: "null",
       age: "null",
       privilege: "NONE",
-      alias: form.alias
+      alias: form.alias,
+      password: form.password
     })
 
     if (error) {
       setErrors((err) => ({ ...err, form: error }));
     }
     
-    if (data?.age !== 0) {
-      setUser(data?.alias)
-      navigate("/messages");
-      await apiClient.connect(data?.alias, receiveMessage)
-    }
+    if (error === null) {
 
+      if (data?.age !== 0) {
+        setUser(data?.alias)
+        navigate("/messages");
+
+        setMessageList((await apiClient.fetchAllMessages(data?.alias)).data?.map(element => {
+          return <TextMessage message={element.message} sender={element.sender} receiver={element.receiver} />
+        }))
+
+        await apiClient.connect(data?.alias, receiveMessage)
+      }
+
+    }
+    
     setIsProcessing(false);
   };
 

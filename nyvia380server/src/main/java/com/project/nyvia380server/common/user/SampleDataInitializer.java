@@ -35,6 +35,7 @@ public class SampleDataInitializer {
             .lastName("Last " + Character.toString((new Random().nextInt(26) + 'A')))
             .age(16 + new Random().nextInt(22))
             .alias("Mr. " + Character.toString((new Random().nextInt(26) + 'A')))
+            .password("password")
             .build();
 
     /*

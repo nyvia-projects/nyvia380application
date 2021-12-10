@@ -31,6 +31,10 @@ public class UserMetaData {
     @JsonProperty("age")
     int age;
 
+    @NotNull @NotBlank @NotEmpty(message = "Password cannot be empty!")
+    @JsonProperty("password")
+    String password;
+
     @NotNull
     @JsonProperty("privilege")
     Privilege privilege;
