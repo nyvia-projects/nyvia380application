@@ -19,24 +19,25 @@ public class SampleDataInitializer {
     @Bean
     CommandLineRunner commandLineRunner(UserRepository userRepository){
         userRepository.deleteAll();
-        return args -> {
-            userRepository.saveAll(supplyUsersForDB.apply(10));
+//        return args -> {
+//            userRepository.saveAll(supplyUsersForDB.apply(10));
             /*
             userRepository.save(moderatorSupplier.get()); //FIXME this
             userRepository.save(adminSupplier.get()); //FIXME this
 
              */
-        };
+        //};
+        return args -> {};
     }
 
-    Supplier<Member> userSupplier = () -> Member.builder()
-            //.id(UUID.randomUUID())
-            .firstName("Char " + Character.toString((new Random().nextInt(26) + 'A')))
-            .lastName("Last " + Character.toString((new Random().nextInt(26) + 'A')))
-            .age(16 + new Random().nextInt(22))
-            .alias("Mr. " + Character.toString((new Random().nextInt(26) + 'A')))
-            .password("password")
-            .build();
+//    Supplier<Member> userSupplier = () -> Member.builder()
+//            //.id(UUID.randomUUID())
+//            .firstName("Char " + Character.toString((new Random().nextInt(26) + 'A')))
+//            .lastName("Last " + Character.toString((new Random().nextInt(26) + 'A')))
+//            .age(16 + new Random().nextInt(22))
+//            .alias("Mr. " + Character.toString((new Random().nextInt(26) + 'A')))
+//            .password("password")
+//            .build();
 
     /*
     Supplier<Moderator> moderatorSupplier = () -> Moderator.builder()
@@ -52,9 +53,9 @@ public class SampleDataInitializer {
             .build();
      */
 
-    Function<Integer, List<Member>> supplyUsersForDB = integer -> Stream.generate(() -> userSupplier.get())
-            .limit(integer)
-            .collect(Collectors.toList());
+//    Function<Integer, List<Member>> supplyUsersForDB = integer -> Stream.generate(() -> userSupplier.get())
+//            .limit(integer)
+//            .collect(Collectors.toList());
 
 
 

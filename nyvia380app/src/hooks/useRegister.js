@@ -76,23 +76,31 @@ export const useRegister = () => {
     setIsProcessing(true);
     setErrors((err) => ({ ...err, form: null }));
 
-    const { data, error } = await apiClient.register({
-      firstName: form.firstName,
-      lastName: form.lastName,
-      age: form.age,
-      privilege: form.privilege,
-      alias: form.alias,
-      password: form.password
-    });
+    const res = await apiClient.fetchUserByUsername(form.alias);
 
-    if (error) setErrors((err) => ({ ...err, form: error }));
-    console.log(error)
+    console.log("res: " + res.data)
+    console.log("err: " + res.error)
 
-    if (error === null) {
-      if (data?.age !== 0) {
-        setUser(data?.alias)
-        navigate("/messages");
-        await apiClient.connect(data?.alias, receiveMessage)
+    //if alias doesn't exist in db
+    if (res.error !== null) {
+      
+      const { data, error } = await apiClient.register({
+        firstName: form.firstName,
+        lastName: form.lastName,
+        age: form.age,
+        privilege: form.privilege,
+        alias: form.alias,
+        password: form.password
+      });
+
+      if (error) setErrors((err) => ({ ...err, form: error }));
+
+      if (error === null) {
+        if (data?.age !== 0) {
+          setUser(data?.alias)
+          navigate("/messages");
+          await apiClient.connect(data?.alias, receiveMessage)
+        }
       }
     }
 

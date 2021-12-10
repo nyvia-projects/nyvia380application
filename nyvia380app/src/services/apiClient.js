@@ -89,6 +89,10 @@ class ApiClient {
         return;
     }
 
+    async fetchUserByUsername(username) {
+        return this.request({ endpoint: `/users/findUserByAlias/${username}`, method: "GET" })
+    }
+
     async fetchAllUsers() {
         return this.request({ endpoint: "/users/all", method: "GET" })
     }
