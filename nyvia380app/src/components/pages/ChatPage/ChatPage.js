@@ -3,29 +3,31 @@ import leftChevron from "../../../assets/chevron-left-square.png"
 import rightChevron from "../../../assets/chevron-right-square.png"
 
 import { ChatDisplay, ChatMenu, ChatTextBox, TextMessasge } from "components";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import ChatContext from "context/chat";
+import AuthContext from "context/auth";
+import { useNavigate } from "react-router-dom";
 
 function ChatPage() {
 
+    const { user } = useContext(AuthContext)
     const { messageList, setMessageList, selectedUser, setSelectedUser } = useContext(ChatContext)
     const [friendList, setFriendList] = useState()
     const [isOpen, setIsOpen] = useState(true)
+    const navigate = useNavigate();
+
     
-    // const [temp, setTemp] = useState([])
-    
-    // useEffect(() => {
+    useEffect(() => {
         
-    //     const fetchMessages = () => {
+        const fetchMessages = () => {
 
-    //         //Here you would iterate through api 
-    //         temp.forEach(message => {
-    //             createTextMessage(message)
-    //         })
-    //     }
+           if (user === null) {
+                navigate("/login");
+           }
+        }
 
-    //     fetchMessages()
-    // }, [])
+        fetchMessages()
+    }, [])
     
 
     const createTextMessage = (textMessage, receiver, sender) => {
