@@ -41,5 +41,5 @@
 
 .TextMessage .text-message-span {
     text-align: end;
-    word-break: break-all;
+    word-break: normal;
 }

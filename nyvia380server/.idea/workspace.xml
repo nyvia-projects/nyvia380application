@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52cd3a18-2382-4866-b535-0ebc3f2c564b" name="Changes" comment="convert message to messagemetadata in controller" />
+    <list default="true" id="52cd3a18-2382-4866-b535-0ebc3f2c564b" name="Changes" comment="convert message to messagemetadata in controller">
+      <change beforePath="$PROJECT_DIR$/../nyvia380app/src/components/ChatMenu/ChatMenu.css" beforeDir="false" afterPath="$PROJECT_DIR$/../nyvia380app/src/components/ChatMenu/ChatMenu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nyvia380app/src/components/ChatMenu/ChatMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/../nyvia380app/src/components/ChatMenu/ChatMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nyvia380app/src/components/TextMessage/TextMessage.css" beforeDir="false" afterPath="$PROJECT_DIR$/../nyvia380app/src/components/TextMessage/TextMessage.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -200,6 +204,7 @@
       <workItem from="1638909214428" duration="3809000" />
       <workItem from="1639087179454" duration="760000" />
       <workItem from="1639161036267" duration="2281000" />
+      <workItem from="1639163694608" duration="668000" />
     </task>
     <task id="LOCAL-00001" summary="Enabled Custom Rest Exception Handling">
       <created>1636595575168</created>

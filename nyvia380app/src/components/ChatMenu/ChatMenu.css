@@ -1,14 +1,14 @@
-.ChatMenu .wrapper {
+.ChatMenu {
+  height: 100%;
+}
+
+/* .ChatMenu .wrapper {
+
   user-select: none;
-}
-
-.ChatMenu .wrapper:hover {
-  cursor: pointer;
-}
-
-.ChatMenu .wrapper:active {
-  transform: translateY(1px);
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: start; 
+}*/
 
 .ChatMenu .reload-btn {
   color: #ffffff;
@@ -84,4 +84,17 @@
     padding: 0px;
     transform: none;
     z-index: 100;
+}
+
+.ChatMenu .current-user {
+  position: absolute;
+  bottom: 0;
+  Justify-self: flex-end;
+
+  font-family: "Playfair Display", serif;
+  font-size: 150%;
+  color: #ffffff;
+  font-weight: bold;
+
+  background: rgba(16, 94, 229, 0.87);
 }

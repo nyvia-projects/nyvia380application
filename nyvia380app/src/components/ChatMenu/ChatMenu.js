@@ -68,14 +68,19 @@ function ChatMenu ({friendList, setFriendList, selectedUser, setSelectedUser}) {
 
     return (
         <div className="ChatMenu">
-            {/* <div style={{marginBottom: "5px"}}>
-                Welcome {user}
-            </div> */}
-            <div className="reload-btn" onClick={reloadFriends}>
-            <i className="gg-redo"></i><div>RELOAD</div>
-            </div>
-            <div className="friend-list">
-                {loadFriends()}
+                {/* <div style={{marginBottom: "5px"}}>
+                    Welcome {user}
+                </div> */}
+                <div className="reload-btn" onClick={reloadFriends}>
+                <i className="gg-redo"></i><div>RELOAD</div>
+                </div>
+            <div className="wrapper">
+                <div className="friend-list">
+                    {loadFriends()}
+                </div>
+                <span className="current-user">
+                    {user}
+                </span>
             </div>
         </div>
     )
