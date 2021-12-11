@@ -45,10 +45,8 @@ export const useLogin = () => {
     if (error) {
       setErrors((err) => ({ ...err, form: error }));
     }
-    
-    if (error === null) {
 
-      if (data?.age !== 0) {
+    if (error === null) {
         setUser(data?.alias)
         navigate("/messages");
 
@@ -61,8 +59,6 @@ export const useLogin = () => {
         }
 
         await apiClient.connect(data?.alias, receiveMessage)
-      }
-
     }
     
     setIsProcessing(false);

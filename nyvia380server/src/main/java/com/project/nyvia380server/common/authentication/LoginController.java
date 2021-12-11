@@ -13,31 +13,25 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins = "http://localhost:3000")
 @RequiredArgsConstructor
 public class LoginController {
-    @Autowired
-    private UserController userController;
+
+//  @Autowired
+    private final UserController userController;
 
     @PostMapping("/login")
-    public ResponseEntity<?> userLogin (@RequestBody UserMetaData member) {
-        UserMetaData user = validateUser(member);
-
-        if (user.getFirstName() != "null") {
-            return ResponseEntity.ok(user);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-    }
-
-    public UserMetaData validateUser (UserMetaData user) {
+    public ResponseEntity<?> userLogin(@RequestBody UserMetaData member) {
 
         try {
-            UserMetaData res = userController.findUserByAlias(user.getAlias());
-            if (res.getPassword().equals(user.getPassword()))
-                return res;
+            UserMetaData user = userController.findUserByAlias(member.getAlias());
+            if (user.getPassword().equals(member.getPassword()))
+                // User exist and password correct
+                return ResponseEntity.ok(user);
             else
-                return user;
+                // Password incorrect
+                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 
         } catch (ResourceNotFoundException e) {
-            return user;
+            // No user with alias in db
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 }

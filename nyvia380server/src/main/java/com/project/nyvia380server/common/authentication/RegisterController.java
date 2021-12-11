@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class RegisterController {
 
-//    @Autowired
+//  @Autowired
     private final UserController userController;
 
     @PostMapping("/register")

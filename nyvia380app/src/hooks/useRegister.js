@@ -75,14 +75,6 @@ export const useRegister = () => {
     evt.preventDefault();
     setIsProcessing(true);
     setErrors((err) => ({ ...err, form: null }));
-
-    const res = await apiClient.fetchUserByUsername(form.alias);
-
-    console.log("res: " + res.data)
-    console.log("err: " + res.error)
-
-    //if alias doesn't exist in db
-    if (res.error !== null) {
       
       const { data, error } = await apiClient.register({
         firstName: form.firstName,
@@ -102,7 +94,6 @@ export const useRegister = () => {
           await apiClient.connect(data?.alias, receiveMessage)
         }
       }
-    }
 
     setIsProcessing(false);
   };

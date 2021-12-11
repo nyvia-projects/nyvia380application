@@ -5,28 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52cd3a18-2382-4866-b535-0ebc3f2c564b" name="Changes" comment="Fixed MessageRepository&#10;Added sample users&#10;Fixed RegisterController">
-      <change afterPath="$PROJECT_DIR$/../nyvia380app/nyvia380app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/chat/SampleMessageInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/SampleMessageInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/nyvia380_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/nyvia380_war.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/nyvia380_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/nyvia380_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/Nyvia380Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/Nyvia380Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/Authorization/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/Authorization/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/Authorization/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/RegisterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/chat/ChatAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/chat/ChatAppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/chat/ChatMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/chat/ChatMessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/chat/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/chat/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/chat/MessageDB.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/SampleDataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/SampleDataInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/user/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/ChatAppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/ChatAppController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/ChatMessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/ChatMessageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/chat/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/SampleDataInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/nyvia380server/common/user/SampleDataInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/nyvia380server/common/authentication/RegisterController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +237,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="WebSocketConfig &amp; Message" />
