@@ -43,7 +43,7 @@ public class UserService {
     }
 
     public Member findUserByAlias(String alias) {
-        return userRepository.findByAlias(alias);
+        return userRepository.findUserByAliasOrThrowNotFound(alias);
     }
 
     public Member insertUser(Member newUser) {

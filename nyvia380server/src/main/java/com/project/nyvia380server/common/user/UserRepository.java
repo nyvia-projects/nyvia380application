@@ -10,15 +10,15 @@ import java.util.List;
 public interface UserRepository extends MongoRepository<Member, String> {
 
     default Member findUserOrThrowNotFound(String id) {
-        List<Member> members = findAll();
-        return members.stream()
+        return findAll().stream()
                 .filter(member -> member.getId()
                         .equals(id))
                 .findFirst()
                 .orElseThrow(() -> new ResourceNotFoundException("User Not Found!"));
     }
 
-    default Member findByAlias(String alias) {
+
+    default Member findUserByAliasOrThrowNotFound(String alias) {
         List<Member> members = findAll();
         return members.stream()
                 .filter(member -> member.getAlias()

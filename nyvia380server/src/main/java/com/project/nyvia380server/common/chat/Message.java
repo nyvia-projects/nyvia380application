@@ -15,6 +15,7 @@ import java.util.UUID;
 @Builder
 @Getter
 @AllArgsConstructor
+@NoArgsConstructor(force = true)
 @RequiredArgsConstructor(onConstructor = @__(@PersistenceConstructor))
 public class Message {
 

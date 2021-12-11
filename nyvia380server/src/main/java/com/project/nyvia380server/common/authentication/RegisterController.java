@@ -1,11 +1,11 @@
-package com.project.nyvia380server.common.Authorization;
+package com.project.nyvia380server.common.authentication;
 
 
-import com.project.nyvia380server.common.user.Member;
 import com.project.nyvia380server.common.user.UserController;
 import com.project.nyvia380server.common.user.UserMetaData;
+import com.project.nyvia380server.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,17 +18,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class RegisterController {
 
-    @Autowired
-    private UserController userController;
+//    @Autowired
+    private final UserController userController;
 
     @PostMapping("/register")
-    public ResponseEntity<?> userRegister (@RequestBody UserMetaData member) {
-        return ResponseEntity.ok((createUser(member)));
+    public ResponseEntity<UserMetaData> userRegister (@RequestBody UserMetaData member) {
+        try {
+            userController.findUserByAlias(member.getAlias());
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        } catch (ResourceNotFoundException exception) {
+            return ResponseEntity.ok(userController.insertUser(member));
+        }
+
     }
 
-    public UserMetaData createUser (UserMetaData user) {
-
-        //System.out.println(userController.findUserByAlias(user.getAlias()));
-        return userController.insertUser(user);
-    }
 }

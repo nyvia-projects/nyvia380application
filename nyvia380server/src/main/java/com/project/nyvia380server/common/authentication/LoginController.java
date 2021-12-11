@@ -1,8 +1,7 @@
-package com.project.nyvia380server.common.Authorization;
+package com.project.nyvia380server.common.authentication;
 
 import com.project.nyvia380server.common.user.UserController;
 import com.project.nyvia380server.common.user.UserMetaData;
-import com.project.nyvia380server.exception.BadRequestException;
 import com.project.nyvia380server.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -19,6 +19,22 @@ public class SampleDataInitializer {
     @Bean
     CommandLineRunner commandLineRunner(UserRepository userRepository){
         userRepository.deleteAll();
+        userRepository.save(Member.builder()
+                .alias("bob")
+                .firstName("Bob")
+                .lastName("The G")
+                .age(21)
+                .password("123")
+                .build());
+
+        userRepository.save(Member.builder()
+                .alias("sam")
+                .firstName("Sam")
+                .lastName("Lil G")
+                .age(21)
+                .password("123")
+                .build());
+
 //        return args -> {
 //            userRepository.saveAll(supplyUsersForDB.apply(10));
             /*
