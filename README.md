@@ -6,8 +6,7 @@ Description
 ---
 Spring Boot WebApplication
     
-    eComerece or Social Media-like app with web UI and database
-    More Detailed Description Coming Soon!
+    WebSockets Powered Chatting application, with server & web client
 
 #For DEV
 
@@ -19,7 +18,7 @@ You need:
 
     Git (IntelliJ will have the integration)
 
-    No Database selected nor in use yet, so check for updates
+    MongoDB & Mongo Compass
 
 #For Collaboration & Project / Task Management
 
