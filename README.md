@@ -1,66 +1,57 @@
 # nyvia380
+
 My Project for COMP 380 and my team
 
-Description
+## Spring Boot WebSocket Chatting Application
 
----
-Spring Boot WebApplication
-    
-    WebSockets Powered Chatting application, with server & web client
+A Spring Boot-based chat application powered by WebSockets. The application leverages a multi-model Spring Boot RESTful API, with MongoDB for data storage and WebSockets for real-time communication. It features JWT authentication for enhanced security, custom exception handling for tailored business logic, and HTTP interactions.
 
-#For DEV
+![Image](n380.png)
 
-You need:
+### Architecture Overview:
 
-    IntelliJ IDEA Ultimate (can get with your student email for free)
+The API adheres to MVC and DTO design patterns, complementing Spring's Model-Service-Controller architecture. MongoDB serves as the go-to data persistence solution, while WebSockets enable seamless real-time communication. Through the adept utilization of Spring Beans and Dependency Injection, the application promises modularity, flexibility, and ease in testing, feature expansion, and maintenance.
 
-    Java 11 SDK installed
+### MongoDB & WebSockets:
 
-    Git (IntelliJ will have the integration)
+- **MongoDB**: A flexible, schema-free database perfect for the needs of a multi-model application.
+- **WebSockets**: Facilitates real-time communication, essential for instant messaging and dynamic data updates.
 
-    MongoDB & Mongo Compass
+### Authentication & Exception Handling:
 
-#For Collaboration & Project / Task Management
+- **JWT Authentication**: Assures secure access through JWT tokens.
+- **Custom Exception Handling**: Boosts error resilience by addressing HTTP and database connection exceptions specifically.
 
-    Asana                                   project & task management tool
-    Code With Me                            plugin for IntelliJ IDEA for collaboration
-    Discord*                                chats and meeting calls
+### Testing & Tools:
 
+Comprehensive testing ensures the application's reliability:
 
-#Technical Info
+- **JUnit 5**: For unit testing.
+- **Mockito**: Used in tandem with JUnit for integration testing.
+- **Postman**: Aids in testing API endpoints.
 
----
-Main Language Used: **Java**
+### Additional tools include:
 
-Database:
+- **Maven**: Project management.
+- **Git**: Version control.
+- **React.js**: For crafting the client-side interface.
 
-        MongoDB | MySQL
+## Development Setup
 
+### Prerequisites:
 
-Other languages, tools, libraries and technologies we WILL use
+- **IntelliJ IDEA Ultimate**: Preferably obtained through a student email for free access.
 
-    Spring Framework                        for Build
-    
-    JUnit5                                  for Testing
+- **Java 11 SDK**: Ensure it's installed and properly set up.
 
-    html, Spring MVC                        for Structure of Web Pages
+- **Git**: While IntelliJ offers integrated Git support, having Git installed is essential.
 
-    CSS/SASS/Bootstrap                      for Design of Web Pages & Elements
+- **MongoDB**: Used for database storage. It's advisable to also install Mongo Compass for easier database navigation and management.
 
-    JavaScript/jQuery                       for Front End Scripting (functionality & design)
+### Collaboration & Project Management:
 
-Other languages, tools and technologies we MIGHT use
+- **Asana**: A comprehensive tool for project and task management.
 
-    Jakarta Server Pages (JSP)              
-    Thymeleaf                               for Dynamic Web Pages
-    Kotlin Language                         for General purpose concurent usage w/ Java & Back End Scripting
-    Selenium                                for Automation Testing with JUnit classes
-    ...   
+- **Code With Me**: A collaborative plugin for IntelliJ IDEA that enables real-time collaborative coding.
 
-Other notes
-
-    We might deloy final project artifcat into Apache Tomcat Server
-    We will also try to develop Messaging Service 
-    And have a really cool, responsive, animated web design
-    
-
+- **Discord**: Ideal for team chats, meeting calls, and even screen sharing sessions.
